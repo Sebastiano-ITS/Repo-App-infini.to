@@ -1,6 +1,6 @@
 # infinito.to
 
-Repository for the App Project Infini*to planetarioditorino.it.
+Repository for the App Project Infini*to [planetarioditorino.it](https://planetarioditorino.it/).
 
 
 <p align="center">
