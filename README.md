@@ -59,28 +59,19 @@ app/
 
 
 <a href="https://github.com/AlbusITS">
-  <img src="https://github.com/AlbusITS.png" width="50" />
+  <img style="border-radius: 20%;" src="https://github.com/AlbusITS.png" width="50" />
 </a>
-<a href="https://github.com/AleNino1210">
-  <img src="https://github.com/AleNino1210.png" width="50" />
+<a  href="https://github.com/AleNino1210">
+  <img style="border-radius: 20%;" src="https://github.com/AleNino1210.png" width="50" />
 </a>
 <a href="https://github.com/itsvachun">
-  <img src="https://github.com/itsvachun.png" width="50" />
+  <img style="border-radius: 20%;" src="https://github.com/itsvachun.png" width="50" />
 </a>
 <a href="https://github.com/Sebastiano-ITS">
-  <img src="https://github.com/Sebastiano-ITS.png" width="50" />
+  <img style="border-radius: 20%;" src="https://github.com/Sebastiano-ITS.png" width="50" />
 </a>
 <a href="https://github.com/edo0204">
-  <img src="https://github.com/edo0204.png" width="50" />
+  <img style="border-radius: 20%;" src="https://github.com/edo0204.png" width="50" />
 </a>
 
 ---
-
-<style>
-
-  a > img{
-    border-radius: 20%;
-  }
-
-
-</style>
