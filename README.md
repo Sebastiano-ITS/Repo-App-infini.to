@@ -43,14 +43,35 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 
 <pre>
 
-app/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/tuodominio/tuoapp/
-│   │   ├── res/
-│   │   └── AndroidManifest.xml
-├── build.gradle
+├───app
+│   └───src
+│       ├───androidTest
+│       │   └───java
+│       │       └───com
+│       │           └───example
+│       │               └───infinito
+│       ├───main
+│       │   ├───java
+│       │   │   └───com
+│       │   │       └───example
+│       │   │           └───infinito
+│       │   └───res
+│       │       ├───drawable
+│       │       ├───layout
+│       │       ├───mipmap-anydpi
+│       │       ├───mipmap-hdpi
+│       │       ├───mipmap-mdpi
+│       │       ├───mipmap-xhdpi
+│       │       ├───mipmap-xxhdpi
+│       │       ├───mipmap-xxxhdpi
+│       │       ├───values
+│       │       ├───values-night
+│       │       └───xml
+│       └───test
+│           └───java
+│               └───com
+│                   └───example
+│                       └───infinito
 
 </pre>
 
