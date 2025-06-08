@@ -75,31 +75,32 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 
 ## 🎨 Color Palette
 
-| Colore | Nome | Codice |
-|--------|------|--------|
-| <div style="width:20px;height:20px;background:#3855A8;border:1px solid #ccc;border-radius:4px;"></div> | Primary | `#3855A8` |
-| <div style="width:20px;height:20px;background:#D5E0FF;border:1px solid #ccc;border-radius:4px;"></div> | Primary Container | `#D5E0FF` |
-| <div style="width:20px;height:20px;background:#FFFFFF;border:1px solid #ccc;border-radius:4px;"></div> | On Primary | `#FFFFFF` |
-| <div style="width:20px;height:20px;background:#0C1B3F;border:1px solid #ccc;border-radius:4px;"></div> | On Primary Container | `#0C1B3F` |
-| <div style="width:20px;height:20px;background:#4E638A;border:1px solid #ccc;border-radius:4px;"></div> | Secondary | `#4E638A` |
-| <div style="width:20px;height:20px;background:#C8D7F2;border:1px solid #ccc;border-radius:4px;"></div> | Secondary Container | `#C8D7F2` |
-| <div style="width:20px;height:20px;background:#FFFFFF;border:1px solid #ccc;border-radius:4px;"></div> | On Secondary | `#FFFFFF` |
-| <div style="width:20px;height:20px;background:#1B2A40;border:1px solid #ccc;border-radius:4px;"></div> | On Secondary Container | `#1B2A40` |
-| <div style="width:20px;height:20px;background:#FF6E2C;border:1px solid #ccc;border-radius:4px;"></div> | Tertiary | `#FF6E2C` |
-| <div style="width:20px;height:20px;background:#FFD7C2;border:1px solid #ccc;border-radius:4px;"></div> | Tertiary Container | `#FFD7C2` |
-| <div style="width:20px;height:20px;background:#FFFFFF;border:1px solid #ccc;border-radius:4px;"></div> | On Tertiary | `#FFFFFF` |
-| <div style="width:20px;height:20px;background:#401100;border:1px solid #ccc;border-radius:4px;"></div> | On Tertiary Container | `#401100` |
-| <div style="width:20px;height:20px;background:#4E638A;border:1px solid #ccc;border-radius:4px;"></div> | Secondary (alt) | `#4E638A` |
-| <div style="width:20px;height:20px;background:#C8D7F2;border:1px solid #ccc;border-radius:4px;"></div> | Secondary Container (alt) | `#C8D7F2` |
-| <div style="width:20px;height:20px;background:#FFFFFF;border:1px solid #ccc;border-radius:4px;"></div> | On Secondary (alt) | `#FFFFFF` |
-| <div style="width:20px;height:20px;background:#1B2A40;border:1px solid #ccc;border-radius:4px;"></div> | On Secondary Container (alt) | `#1B2A40` |
-| <div style="width:20px;height:20px;background:#0C0E1A;border:1px solid #ccc;border-radius:4px;"></div> | Background | `#0C0E1A` |
-| <div style="width:20px;height:20px;background:#F2F4F8;border:1px solid #ccc;border-radius:4px;"></div> | On Background | `#F2F4F8` |
-| <div style="width:20px;height:20px;background:#1D1F2A;border:1px solid #ccc;border-radius:4px;"></div> | Surface | `#1D1F2A` |
-| <div style="width:20px;height:20px;background:#E1E4F0;border:1px solid #ccc;border-radius:4px;"></div> | On Surface | `#E1E4F0` |
-| <div style="width:20px;height:20px;background:#FF3B3B;border:1px solid #ccc;border-radius:4px;"></div> | Error | `#FF3B3B` |
-| <div style="width:20px;height:20px;background:#FFFFFF;border:1px solid #ccc;border-radius:4px;"></div> | On Error | `#FFFFFF` |
-| <div style="width:20px;height:20px;background:#5E6170;border:1px solid #ccc;border-radius:4px;"></div> | Outline | `#5E6170` |
+| Nome                        | Codice     |
+|-----------------------------|------------|
+| Primary                     | `#3855A8`  |
+| Primary Container           | `#D5E0FF`  |
+| On Primary                  | `#FFFFFF`  |
+| On Primary Container        | `#0C1B3F`  |
+| Secondary                   | `#4E638A`  |
+| Secondary Container         | `#C8D7F2`  |
+| On Secondary                | `#FFFFFF`  |
+| On Secondary Container      | `#1B2A40`  |
+| Tertiary                   | `#FF6E2C`  |
+| Tertiary Container         | `#FFD7C2`  |
+| On Tertiary                | `#FFFFFF`  |
+| On Tertiary Container      | `#401100`  |
+| Secondary (alt)            | `#4E638A`  |
+| Secondary Container (alt)  | `#C8D7F2`  |
+| On Secondary (alt)         | `#FFFFFF`  |
+| On Secondary Container (alt)| `#1B2A40` |
+| Background                 | `#0C0E1A`  |
+| On Background              | `#F2F4F8`  |
+| Surface                    | `#1D1F2A`  |
+| On Surface                 | `#E1E4F0`  |
+| Error                      | `#FF3B3B`  |
+| On Error                   | `#FFFFFF`  |
+| Outline                    | `#5E6170`  |
+
 
 
 
