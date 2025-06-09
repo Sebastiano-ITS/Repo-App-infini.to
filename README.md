@@ -102,7 +102,7 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 | Outline                    | `#5E6170`  |
 
 
-
+<!-- riga vuota -->
 
 ## 👨‍💻 Autori
 
