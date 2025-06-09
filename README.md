@@ -1,7 +1,9 @@
-# infini*TO
+# 
 
+# 📱 INFINI.TO - Technical Documentation
 
-Repository for the App Project Infini*to [planetarioditorino.it](https://planetarioditorino.it/).
+Welcome to the technical documentation for the development of the mobile application dedicated to [planetarioditorino.it](https://planetarioditorino.it/) a museum in Turin. This document contains technical, design, and organizational information required to understand and evaluate the project.
+
 
 
 <p align="center">
@@ -13,31 +15,43 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 
 # Indice
 
-- [Come iniziare](#come-iniziare)
-- [Come compilare](#🚀-come-compilare-il-progetto)
-- [Collaboratori](#👨‍💻-autori)
+- [Come iniziare](#🚀-come-iniziare)
+- [SiteMap](#sitemap)
+- [PaletteColori](#🎨-color-palette-material-design-3-roles)
+
 
 ---
 
+# 1. 🎯 Introduction
+
+**Museum name:** Infini.to – Planetarium of Turin, Museum of Astronomy and Space
+
+**App objectives:**
+The application is designed to:
+- Make museum information more accessible (exhibitions, events, opening hours, etc.)
+- Improve user engagement and retention through a polished UX and engaging content
+- Facilitate the purchase of tickets in an intuitive way
+- (Optional) Integrate **gamification** elements to engage visitors
+
+**Target audience:** Museum enthusiasts, families, students, and casual visitors
+
+## 🚀 Come iniziare
+
+### Clona il repository:
+   ```bash
+   git clone https://github.com/Sebastiano-ITS/Repo-App-infini.to.git
+   ```
 
 ## 🛠️ Tecnologie utilizzate
 
-- **Linguaggio:** Kotlin / Java
+- **Linguaggio:** Kotlin
 - **IDE:** Android Studio
 - **Architettura:** MVVM
 - **Librerie principali:**
   - Jetpack Components (ViewModel, Navigation)
-  - Room per persistenza dati
-  - Glide o Coil per il caricamento immagini
+  - Glide per il caricamento immagini
 
-# Come iniziare
 
-## 🚀 Come compilare il progetto
-
-1. Clona il repository:
-   ```bash
-   git clone https://github.com/Sebastiano-ITS/Repo-App-infini.to.git
-   ```
 
 ## 📂 Struttura del progetto
 
@@ -75,6 +89,50 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 
 </pre>
 
+# 2. 🔍 Preliminary Analysis
+
+Before designing the structure and functionality of the app, we conducted a **preliminary analysis** of both the museum’s website and other mobile applications from renowned museums.
+
+**Sources:**
+- The official website of Infini.to
+- Mobile apps from major museums such as the Louvre, British Museum, MoMA, and Vatican Museums
+
+**Goals of the analysis:**
+- Identify essential content and information to include (e.g., schedules, contacts, event details)
+- Evaluate the most common and appreciated features in similar apps (e.g., user profiles, ticket purchases, news updates)
+- Understand navigation patterns and layout best practices
+
+The insights gathered during this phase directly informed the sitemap, features, and overall user experience design.
+
+
+
+# 3. 🧭 App Architecture
+
+### Main Screens:
+- **Home** – Main dashboard with featured content
+- **Profile** – User profile and settings
+- **Tickets** – View and purchase museum tickets
+- **News** – Updates and announcements
+- **Events** – List of upcoming events and detailed descriptions
+- **Opening Hours & Contacts** – Museum schedule and contact information
+
+### Navigation:
+- Navigation structure will be defined later in the development process.
+
+### Gamification:
+- Not included in the current planning phase.
+
+### Authentication:
+- The decision regarding login/registration is pending and will be evaluated later.
+
+---
+
+
+# 4. 🎨 Design Document
+
+### Moodboard
+The selected moodboard was custom-made by the team and features space-themed imagery, aligning with the astronomical identity of the museum.
+
 
 ## 🎨 Color Palette (Material Design 3 roles)
 
@@ -105,8 +163,41 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 | Outline                    | `#5E6170`  |
 
 
-## 👨‍💻 Autori
+> _Note: The secondary color is under consideration — both the muted blue (#4E638A) and vivid violet (#4E63EA) are currently being evaluated._
 
+
+### Typography
+- **Primary Font:** [Orbitron](https://fonts.google.com/specimen/Orbitron) (used for headers and thematic elements)
+- **Secondary Font:** [Roboto](https://fonts.google.com/specimen/Roboto) (used for body text and interface elements)
+
+### Sitemap
+```
+Home
+├── News
+│   └── News Details
+├── Profile
+│   ├── Settings
+│   ├── Login
+│   └── Favorites
+├── Events
+│   ├── Kids
+│   └── Event Details
+├── Schools
+│   └── Activity Sheets
+├── Tickets
+│   └── Payment
+└── Opening Hours & Contacts
+```
+
+> This sitemap guides the structure of the app and informs navigation and wireframe decisions.
+
+### Components
+- No reusable UI components have been defined at this stage.
+
+---
+
+
+## 👨‍💻 Autori
 
 <a href="https://github.com/AlbusITS">
   <img style="border-radius: 20%;" src="https://github.com/AlbusITS.png" width="50" />
@@ -123,5 +214,7 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 <a href="https://github.com/edo0204">
   <img style="border-radius: 20%;" src="https://github.com/edo0204.png" width="50" />
 </a>
+
+
 
 ---
