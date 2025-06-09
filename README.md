@@ -73,36 +73,6 @@ Repository for the App Project Infini*to [planetarioditorino.it](https://planeta
 
 </pre>
 
-## 🎨 Color Palette
-
-| Nome                        | Codice     |
-|-----------------------------|------------|
-| Primary                     | `#3855A8`  |
-| Primary Container           | `#D5E0FF`  |
-| On Primary                  | `#FFFFFF`  |
-| On Primary Container        | `#0C1B3F`  |
-| Secondary                   | `#4E638A`  |
-| Secondary Container         | `#C8D7F2`  |
-| On Secondary                | `#FFFFFF`  |
-| On Secondary Container      | `#1B2A40`  |
-| Tertiary                   | `#FF6E2C`  |
-| Tertiary Container         | `#FFD7C2`  |
-| On Tertiary                | `#FFFFFF`  |
-| On Tertiary Container      | `#401100`  |
-| Secondary (alt)            | `#4E638A`  |
-| Secondary Container (alt)  | `#C8D7F2`  |
-| On Secondary (alt)         | `#FFFFFF`  |
-| On Secondary Container (alt)| `#1B2A40` |
-| Background                 | `#0C0E1A`  |
-| On Background              | `#F2F4F8`  |
-| Surface                    | `#1D1F2A`  |
-| On Surface                 | `#E1E4F0`  |
-| Error                      | `#FF3B3B`  |
-| On Error                   | `#FFFFFF`  |
-| Outline                    | `#5E6170`  |
-
-
-<!-- riga vuota -->
 
 ## 👨‍💻 Autori
 
@@ -162,6 +132,37 @@ style="display: flex;
 </div>
 
 </div>
+
+## 🎨 Color Palette
+
+| Nome                        | Codice     |
+|-----------------------------|------------|
+| Primary                     | `#3855A8`  |
+| Primary Container           | `#D5E0FF`  |
+| On Primary                  | `#FFFFFF`  |
+| On Primary Container        | `#0C1B3F`  |
+| Secondary                   | `#4E638A`  |
+| Secondary Container         | `#C8D7F2`  |
+| On Secondary                | `#FFFFFF`  |
+| On Secondary Container      | `#1B2A40`  |
+| Tertiary                   | `#FF6E2C`  |
+| Tertiary Container         | `#FFD7C2`  |
+| On Tertiary                | `#FFFFFF`  |
+| On Tertiary Container      | `#401100`  |
+| Secondary (alt)            | `#4E638A`  |
+| Secondary Container (alt)  | `#C8D7F2`  |
+| On Secondary (alt)         | `#FFFFFF`  |
+| On Secondary Container (alt)| `#1B2A40` |
+| Background                 | `#0C0E1A`  |
+| On Background              | `#F2F4F8`  |
+| Surface                    | `#1D1F2A`  |
+| On Surface                 | `#E1E4F0`  |
+| Error                      | `#FF3B3B`  |
+| On Error                   | `#FFFFFF`  |
+| Outline                    | `#5E6170`  |
+
+
+
 
 
 ---
