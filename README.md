@@ -199,62 +199,21 @@ Home
 
 ## 👨‍💻 Autori
 
-<div
-style="display: flex;
-  flex-direction: row;
-">
-
-<div style="
-  width: 50px;
-  height: 50px;
-  background-image: url('https://github.com/AlbusITS.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20%;
-">
-</div>
-
-<div style="
-  width: 50px;
-  height: 50px;
-  background-image: url('https://github.com/AleNino1210.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20%;
-">
-</div>
-
-<div style="
-  width: 50px;
-  height: 50px;
-  background-image: url('https://github.com/itsvachun.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20%;
-">
-</div>
-
-<div style="
-  width: 50px;
-  height: 50px;
-  background-image: url('https://github.com/Sebastiano-ITS.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20%;
-">
-</div>
-
-<div style="
-  width: 50px;
-  height: 50px;
-  background-image: url('https://github.com/edo0204.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 20%;
-">
-</div>
-
-</div>
+<a href="https://github.com/AlbusITS">
+  <img style="border-radius: 20%;" src="https://github.com/AlbusITS.png" width="50" />
+</a>
+<a  href="https://github.com/AleNino1210">
+  <img style="border-radius: 20%;" src="https://github.com/AleNino1210.png" width="50" />
+</a>
+<a href="https://github.com/itsvachun">
+  <img style="border-radius: 20%;" src="https://github.com/itsvachun.png" width="50" />
+</a>
+<a href="https://github.com/Sebastiano-ITS">
+  <img style="border-radius: 20%;" src="https://github.com/Sebastiano-ITS.png" width="50" />
+</a>
+<a href="https://github.com/edo0204">
+  <img style="border-radius: 20%;" src="https://github.com/edo0204.png" width="50" />
+</a>
 
 
 
