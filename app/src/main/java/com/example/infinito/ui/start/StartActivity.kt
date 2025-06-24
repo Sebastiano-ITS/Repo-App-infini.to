@@ -9,6 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.AttributeSet
 import android.view.View
+import androidx.core.content.ContextCompat
 import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.R
 
@@ -29,15 +30,10 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Rendi fullscreen
-        window.decorView.systemUiVisibility = (
-                View.SYSTEM_UI_FLAG_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                )
-        actionBar?.hide() // oppure supportActionBar?.hide() se usi AppCompatActivity
-
         setContentView(R.layout.activity_start)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.space_dark_blue)
+
 
         videoBackground = findViewById(R.id.videoBackground)
         startButton = findViewById(R.id.startButton)
