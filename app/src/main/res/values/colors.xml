@@ -4,4 +4,10 @@
     <color name="white">#FFFFFF</color>
     <color name="yellow">#FFFF00</color>
     <color name="black">#1A1A1A</color>
+    <color name="space_dark_blue">#060A14</color>
+
+
+    <color name="black2">#FF000000</color>
+    <color name="cardBackground">#1A1A1A</color>
+
 </resources>

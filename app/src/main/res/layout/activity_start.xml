@@ -1,77 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".ui.start.StartActivity">
+    android:background="@color/space_dark_blue"
+    android:layout_margin="0dp"
+    android:padding="0dp"
+    android:layout_height="match_parent">
+
+    <!-- VideoView come sfondo -->
+    <VideoView
+        android:id="@+id/videoBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp" />
 
     <TextView
-        android:id="@+id/startTitle"
+        android:id="@+id/appTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INFINI.TO"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:textSize="50dp"
         android:fontFamily="@font/orbitron"
-        android:letterSpacing="0.1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
 
-    <TextView
-        android:id="@+id/startSubtitle"
+    <LinearLayout
+        android:id="@+id/textWithLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Il museo interattivo"
-        android:textColor="#CCCCCC"
-        android:textSize="18sp"
-        android:fontFamily="@font/orbitron"
-        app:layout_constraintTop_toBottomOf="@id/startTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
+        android:orientation="vertical"
+        android:layout_below="@id/appTitle"
+        android:layout_above="@id/startButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
-    <View
-        android:id="@+id/decorativeLine"
-        android:layout_width="150dp"
-        android:layout_height="2dp"
-        android:background="@color/white"
-        app:backgroundTint="@null"
-        app:layout_constraintTop_toBottomOf="@id/startSubtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp" />
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Il museo interattivo"
+            android:textSize="34dp"
+            android:fontFamily="@font/orbitron"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/earthGif"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="Immagine della Terra"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="4dp"
+            android:background="#FFC107" />
+    </LinearLayout>
 
+
+    <!-- Bottone grande in basso -->
     <Button
         android:id="@+id/startButton"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/white"
+        android:letterSpacing="0.05"
         android:text="INIZIA"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/orbitron"
-        android:background="@drawable/button_rounded_white"
-        app:backgroundTint="@null"
-        android:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="80dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+</RelativeLayout>
