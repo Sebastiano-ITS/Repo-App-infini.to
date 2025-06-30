@@ -2,6 +2,7 @@ package com.example.infinito.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,13 +12,14 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.infinito.R
+import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.event.EventActivity
 import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.ui.ticket.TicketActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
+private const val ARG_ACTIVITY_NAME = "activityName"
 //private const val ARG_PARAM2 = "param2"
 
 /**
@@ -27,13 +29,14 @@ private const val ARG_PARAM1 = "param1"
  */
 class BottomBarFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
+    private var activityName: ActivityNames? = null
     //private var param2: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
+            activityName = it.getString(ARG_ACTIVITY_NAME)
+                ?.let { it1 -> ActivityNames.valueOf(it1) }
             //param2 = it.getString(ARG_PARAM2)
         }
     }
@@ -76,23 +79,24 @@ class BottomBarFragment : Fragment() {
             requireActivity().overridePendingTransition(0, 0)
         }
 
-        val activeTab = param1
+        val activeTab = activityName
 
         val yellow = ContextCompat.getColor(view.context, R.color.yellow)
 
         when (activeTab) {
-            "home" -> {
+            ActivityNames.HOME -> {
                 view.findViewById<ImageView>(R.id.homeImage).setColorFilter(yellow)
                 view.findViewById<TextView>(R.id.homeText).setTextColor(yellow)
             }
-            "event" -> {
+            ActivityNames.EVENT -> {
                 view.findViewById<ImageView>(R.id.eventImage).setColorFilter(yellow)
                 view.findViewById<TextView>(R.id.eventText).setTextColor(yellow)
             }
-            "ticket" -> {
+            ActivityNames.TICKET -> {
                 view.findViewById<ImageView>(R.id.ticketImage).setColorFilter(yellow)
                 view.findViewById<TextView>(R.id.ticketText).setTextColor(yellow)
             }
+            null -> Log.d("Errore enum ActivityNames", "Non si sa in che activity sono")
         }
     }
 
@@ -101,16 +105,15 @@ class BottomBarFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
+         * @param activityName Activity Name.
          * @return A new instance of fragment BottomBarFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String) =
+        fun newInstance(activityName: ActivityNames) =
             BottomBarFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
+                    putString("activityName", activityName.name)
                     //putString(ARG_PARAM2, param2)
                 }
             }

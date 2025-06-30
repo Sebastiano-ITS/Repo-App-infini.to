@@ -4,17 +4,14 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
 import com.example.infinito.ui.fragment.BottomBarFragment
+import com.example.infinito.ui.fragment.GeneralFragment
 import com.example.infinito.ui.fragment.HeaderFragment
+import com.example.infinito.ui.fragment.NewsFragment
 import com.example.infinito.utils.theme.setFixedTheme
 import com.google.android.material.card.MaterialCardView
 import androidx.fragment.app.Fragment
-import com.example.infinito.ui.fragment.GeneralFragment
-import com.example.infinito.ui.fragment.NewsFragment
 import androidx.core.content.ContextCompat
 import android.widget.ImageView
 import android.widget.TextView
@@ -48,7 +45,7 @@ class EventActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
-            .add(R.id.bottomBar, BottomBarFragment.newInstance(activeTab))
+            .add(R.id.bottomBar, BottomBarFragment.newInstance(ActivityNames.EVENT))
             .commit()
 
 
