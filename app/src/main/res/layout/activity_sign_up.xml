@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/black"
+    tools:context=".ui.signup.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.signup.SignUpActivity">
+
+        <!-- Guidelines -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/headerGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="41dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <!-- Header -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/headerGuide"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <fragment
+                android:id="@+id/headerTitle"
+                android:name="com.example.infinito.ui.fragment.HeaderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <!-- Name section -->
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/nameLabel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toTopOf="@+id/headerGuide" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            style="@style/CustomEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nameLabel"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+        <!-- Surname section -->
+        <TextView
+            android:id="@+id/surnameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surnameLabel"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
+        <EditText
+            android:id="@+id/surnameInput"
+            style="@style/CustomEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/surnameLabel"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/surnameLabel" />
+
+        <!-- Email section -->
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/emailLabel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/surnameInput" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            style="@style/CustomEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/emailLabel"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
+
+        <!-- Password section -->
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/passwordLabel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            style="@style/CustomEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/passwordLabel"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+
+        <!-- Password confirm section -->
+        <TextView
+            android:id="@+id/confirmPasswordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/confirmPasswordLabel"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            style="@style/CustomEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/confirmPasswordLabel"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordLabel" />
+
+        <!-- Login button section -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/orbitron"
+            android:padding="10dp"
+            android:text="@string/loginButtonLabel"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/confirmPasswordInput" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/notSignedLabel"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

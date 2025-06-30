@@ -10,7 +10,7 @@
     <string name="confirmPasswordLabel">Conferma Password</string>
     <string name="otherwiseLabel">Oppure</string>
     <string name="googleButtonLabel">Accedi con Google</string>
-    <string name="notSignedLabel">Non hai ancora un account?\nRegistrati</string>
+    <string name="notSignedLabel">Non hai ancora un account?\n<u>Registrati</u></string>
     <string name="loginButtonLabel">Accedi</string>
 
 
