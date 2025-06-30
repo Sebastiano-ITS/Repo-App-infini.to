@@ -59,7 +59,7 @@
                     android:id="@+id/textGenerale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Generale"
+                    android:text="@string/Generale"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp" />
@@ -98,7 +98,7 @@
                     android:id="@+id/textNews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="News"
+                    android:text="@string/News"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp" />

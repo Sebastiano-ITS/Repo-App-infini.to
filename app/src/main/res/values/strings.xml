@@ -2,4 +2,8 @@
     <string name="app_name">InfiniTO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Generale">Generale</string>
+    <string name="News">News</string>
+    <string name="ScopriDipiu">Scopri di più</string>
+    <string name="Title_card">PLANETARIO + TELESCOPIO (nuova serata osservativa)</string>
 </resources>
