@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import androidx.core.content.ContextCompat
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.infinito.data.model.ActivityNames
 
 
 class EventActivity : AppCompatActivity() {

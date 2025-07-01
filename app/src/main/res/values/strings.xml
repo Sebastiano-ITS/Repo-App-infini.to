@@ -13,7 +13,7 @@
     <string name="notSignedLabel">Non hai ancora un account?\nRegistrati</string>
     <string name="loginButtonLabel">Accedi</string>
 
-
+    <!-- Strings for Eventi -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Generale">Generale</string>
     <string name="News">News</string>
