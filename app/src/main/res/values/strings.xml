@@ -2,4 +2,8 @@
     <string name="app_name">InfiniTO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ticket_title_activity">I Tuoi Biglietti</string>
+    <string name="total_ticket_activity">Totale</string>
+    <string name="total_price_ticket_activity">0,00 €</string>
+    <string name="payment_button">Procedi al pagamento</string>
 </resources>

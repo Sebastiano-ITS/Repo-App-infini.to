@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/titleEventText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="titolo"
+        android:textColor="@color/cyan"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/priceEventText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="00,00 €"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleEventText"
+        app:layout_constraintTop_toBottomOf="@+id/titleEventText" />
+
+    <TextView
+        android:id="@+id/numberOfTicketText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceEventText"
+        app:layout_constraintTop_toTopOf="@+id/priceEventText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
