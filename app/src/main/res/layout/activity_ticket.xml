@@ -9,38 +9,73 @@
     android:fitsSystemWindows="true"
     tools:context=".ui.ticket.TicketActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
+        android:id="@+id/titleTicketActivityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Biglietti"
-        android:textSize="20sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="@string/ticket_title_activity"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textFontWeight="600"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/contactMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ticketRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTicketActivityText" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="@string/total_ticket_activity"
+        android:textColor="@color/cyan"
+        android:textFontWeight="600"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/paymentButton"
+        app:layout_constraintStart_toStartOf="@+id/paymentButton" />
+
+    <TextView
+        android:id="@+id/totalPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/orbitron"
+        android:text="@string/total_price_ticket_activity"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/paymentButton"
+        app:layout_constraintEnd_toEndOf="@+id/paymentButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/paymentButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/button_rounded_white"
+        android:fontFamily="@font/orbitron"
+        android:text="@string/payment_button"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
