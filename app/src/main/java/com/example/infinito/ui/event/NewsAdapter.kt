@@ -16,7 +16,7 @@ class NewsAdapter(private val newsList: List<NewsItem>) :
     class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.newsCardImageView)
         val titleTextView: TextView = itemView.findViewById(R.id.newsCardTitleTextView)
-        // Non abbiamo bisogno di un riferimento all'icona del link esterno perché il click è sulla card
+        // il click è sulla card non sulla singola icona
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
