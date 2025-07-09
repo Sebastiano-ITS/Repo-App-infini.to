@@ -103,14 +103,14 @@ class EventActivity : AppCompatActivity() {
 
 
         cardGenerale.setOnClickListener {
-            Toast.makeText(this, "Hai cliccato su Generale", Toast.LENGTH_SHORT).show()
+
             replaceFragment(GeneralFragment())
             updateCardState(cardGenerale, iconGenerale, textGenerale, true)
             updateCardState(cardNews, iconNews, textNews, false)
         }
 
         cardNews.setOnClickListener {
-            Toast.makeText(this, "Hai cliccato su News", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(this, "Hai cliccato su News", Toast.LENGTH_SHORT).show()
             replaceFragment(NewsFragment())
             updateCardState(cardGenerale, iconGenerale, textGenerale, false)
             updateCardState(cardNews, iconNews, textNews, true)
