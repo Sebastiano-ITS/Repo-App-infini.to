@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:contentDescription="Immagine della Carta"
-        tools:srcCompat="@drawable/placeholder_image" />
+        tools:srcCompat="@drawable/planetario_telescopio" />
 
     <TextView
         android:id="@+id/titleTextView"
