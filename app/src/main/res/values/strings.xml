@@ -13,5 +13,8 @@
     <string name="notSignedLabel">Non hai ancora un account?\nRegistrati</string>
     <string name="loginButtonLabel">Accedi</string>
 
+    <!-- Ticket string -->
+    <string name="title_ticket_screen">I Tuoi Biglietti</string>
+
 
 </resources>

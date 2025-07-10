@@ -16,7 +16,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/orbitron"
-        android:text="@string/ticket_title_activity"
+        android:text="@string/title_ticket_screen"
         android:textColor="@color/white"
         android:textFontWeight="600"
         android:textSize="30sp"
