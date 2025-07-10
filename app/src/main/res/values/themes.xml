@@ -13,6 +13,18 @@
         <item name="android:textColor">@color/cyan</item>
         <item name="android:textColorHint">@color/cyan</item>
     </style>
+    <style name="custom_text_style_ticket_event" >
+        <item name="android:fontFamily">@font/orbitron</item>
+        <item name="android:textColor">@color/cyan</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+    <style name="custom_text_style_ticket" >
+        <item name="android:fontFamily">@font/orbitron</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
 
 
     <style name="CalendarDateText" parent="android:TextAppearance.Medium">
