@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.infinito.R
+import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.fragment.BottomBarFragment
 import com.example.infinito.ui.fragment.HeaderFragment
 import com.example.infinito.utils.theme.setFixedTheme
@@ -15,12 +16,10 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         setFixedTheme(this, window)
 
-        val activeTab = intent.getStringExtra("active_tab") ?: "home"
-
         supportFragmentManager
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
-            .add(R.id.bottomBar, BottomBarFragment.newInstance(activeTab))
+            .add(R.id.bottomBar, BottomBarFragment.newInstance(ActivityNames.HOME))
             .commit()
     }
 }
