@@ -5,282 +5,321 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ui.event.EventDetailActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+        <!-- HEADER FRAGMENT CONTAINER -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/black"
-        tools:context=".ui.event.EventDetailActivity">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:layout_marginTop="70dp">
+
+            <ImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="16dp">
-
-                <ImageView
-                    android:id="@+id/detailImageView"
-                    android:layout_width="0dp"
-                    android:layout_height="250dp"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:srcCompat="@drawable/planetario_telescopio" />
-
-                <ImageView
-                    android:id="@+id/userIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_person" app:tint="#FFC107" android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:contentDescription="Profilo Utente"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/planetario_telescopio" />
 
 
-                <TextView
-                    android:id="@+id/detailTitleTextView"
-                    android:layout_width="0dp"
+            <TextView
+                android:id="@+id/detailTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/orbitron"
+                android:textColor="@color/cyan"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailImageView"
+                tools:text="PLANETARIO + TELESCOPIO" />
+
+            <LinearLayout
+                android:id="@+id/interactiveButtonsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailTitleTextView">
+
+                <!-- Bottone Calendario -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/calendarCardButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="16dp"
-                    android:textColor="#00FFFF" android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/detailImageView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="PLANETARIO + TELESCOPIO" />
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"> <!-- Rimuovi il bordo o imposta a 0dp -->
 
-                <LinearLayout
-                    android:id="@+id/interactiveButtonsLayout"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintTop_toBottomOf="@id/detailTitleTextView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/calendarCardButton"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        app:cardBackgroundColor="@android:color/transparent"
-                        app:cardElevation="0dp"
-                        app:strokeColor="#FFFFFF"
-                        app:strokeWidth="1dp">
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <ImageView
+                            android:id="@+id/iconCalendar"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_calendar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textCalendarLabel"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingTop="12dp"
-                            android:paddingBottom="12dp">
+                            android:layout_marginStart="16dp"
+                            android:text="calendario"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintStart_toEndOf="@id/iconCalendar"
+                            app:layout_constraintTop_toTopOf="@id/iconCalendar" />
 
-                            <ImageView
-                                android:id="@+id/iconCalendar"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_calendar"
-                                app:tint="@color/white"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                        <TextView
+                            android:id="@+id/selectedDateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="2dp"
+                            android:text="Nessuna data selezionata"
+                            android:textColor="#CCCCCC"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconCalendar"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintStart_toEndOf="@id/iconCalendar"
+                            app:layout_constraintTop_toBottomOf="@id/textCalendarLabel" />
 
-                            <TextView
-                                android:id="@+id/textCalendarLabel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="calendario"
-                                android:textColor="@color/white"
-                                android:textSize="16sp"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="@id/iconCalendar"
-                                app:layout_constraintBottom_toBottomOf="@id/iconCalendar"
-                                app:layout_constraintStart_toEndOf="@id/iconCalendar" />
+                        <ImageView
+                            android:id="@+id/arrowCalendar"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <ImageView
-                                android:id="@+id/arrowCalendar"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_arrow_forward" app:tint="@color/white"
-                                android:layout_marginEnd="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                <!-- Separatore Linea Bianca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#FFFFFF" />
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/timeCardButton"
+                <!-- Bottone Orario -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/timeCardButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        app:cardBackgroundColor="@android:color/transparent"
-                        app:cardElevation="0dp"
-                        app:strokeColor="#FFFFFF"
-                        app:strokeWidth="1dp">
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <ImageView
+                            android:id="@+id/iconTime"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_time"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textTimeLabel"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingTop="12dp"
-                            android:paddingBottom="12dp">
+                            android:layout_marginStart="16dp"
+                            android:text="orario"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconTime"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowTime"
+                            app:layout_constraintStart_toEndOf="@id/iconTime"
+                            app:layout_constraintTop_toTopOf="@id/iconTime" />
 
-                            <ImageView
-                                android:id="@+id/iconTime"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_time"
-                                app:tint="@color/white"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                        <ImageView
+                            android:id="@+id/arrowTime"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:id="@+id/textTimeLabel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="orario"
-                                android:textColor="@color/white"
-                                android:textSize="16sp"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="@id/iconTime"
-                                app:layout_constraintBottom_toBottomOf="@id/iconTime"
-                                app:layout_constraintStart_toEndOf="@id/iconTime" />
+                <!-- Separatore Linea Bianca -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#FFFFFF" />
 
-                            <ImageView
-                                android:id="@+id/arrowTime"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_arrow_forward"
-                                app:tint="@color/white"
-                                android:layout_marginEnd="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                <!-- Bottone Tariffa -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/priceCardButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"> <!-- Rimuovi il bordo o imposta a 0dp -->
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/priceCardButton"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@android:color/transparent"
-                        app:cardElevation="0dp"
-                        app:strokeColor="#FFFFFF"
-                        app:strokeWidth="1dp">
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
+                        <ImageView
+                            android:id="@+id/iconPrice"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_price"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textPriceLabel"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingTop="12dp"
-                            android:paddingBottom="12dp">
+                            android:layout_marginStart="16dp"
+                            android:text="tariffa"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconPrice"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowPrice"
+                            app:layout_constraintStart_toEndOf="@id/iconPrice"
+                            app:layout_constraintTop_toTopOf="@id/iconPrice" />
 
-                            <ImageView
-                                android:id="@+id/iconPrice"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_price"
-                                app:tint="@color/white"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                        <ImageView
+                            android:id="@+id/arrowPrice"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                            <TextView
-                                android:id="@+id/textPriceLabel"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="tariffa"
-                                android:textColor="@color/white"
-                                android:textSize="16sp"
-                                android:layout_marginStart="16dp"
-                                app:layout_constraintTop_toTopOf="@id/iconPrice"
-                                app:layout_constraintBottom_toBottomOf="@id/iconPrice"
-                                app:layout_constraintStart_toEndOf="@id/iconPrice" />
-
-                            <ImageView
-                                android:id="@+id/arrowPrice"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:src="@drawable/ic_arrow_forward"
-                                app:tint="@color/white"
-                                android:layout_marginEnd="16dp"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/descriptionTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginTop="24dp"
-                    android:text="Descrizione"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintTop_toBottomOf="@id/interactiveButtonsLayout"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    android:background="#FFFFFF" />
+            </LinearLayout>
 
-                <TextView
-                    android:id="@+id/detailDescriptionTextView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:lineSpacingExtra="4dp"
-                    app:layout_constraintTop_toBottomOf="@id/descriptionTitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:text="- Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari).\n\n- Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)\n\n- L'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)" />
+            <TextView
+                android:id="@+id/descriptionTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/orbitron"
+                android:text="Descrizione"
+                android:textColor="@color/cyan"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interactiveButtonsLayout" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/buyButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="32dp"
-                    android:text="Acquista"
-                    android:textColor="@color/black"
-                    app:backgroundTint="@color/white"
-                    app:cornerRadius="8dp"
-                    app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/detailDescriptionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTitle"
+                tools:text="@string/description_event" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/orbitron"
+                android:text="Acquista"
+                android:textColor="@color/black"
+                android:textFontWeight="800"
+                android:textSize="18dp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView"
+                app:strokeColor="#FFFFFF" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
