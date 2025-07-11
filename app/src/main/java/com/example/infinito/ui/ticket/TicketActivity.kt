@@ -3,8 +3,6 @@ package com.example.infinito.ui.ticket
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.infinito.R
 import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.fragment.BottomBarFragment
@@ -15,7 +13,7 @@ class TicketActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_ticket)
+        setContentView(R.layout.activity_ticket_bought)
         setFixedTheme(this, window)
 
         supportFragmentManager
