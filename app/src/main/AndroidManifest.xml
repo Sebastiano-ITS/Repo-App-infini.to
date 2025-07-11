@@ -13,29 +13,17 @@
         android:theme="@style/Base.Theme.InfiniTO"
         tools:targetApi="31">
         <activity
-            android:name=".ui.event_detail.EventDetailActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.signup.SignUpActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:name=".ui.ticketBought.TicketBoughtActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name=".ui.ticket.TicketActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name=".ui.event.EventActivity"
             android:exported="false"
