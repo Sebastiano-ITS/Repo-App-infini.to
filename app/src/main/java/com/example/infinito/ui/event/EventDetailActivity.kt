@@ -11,46 +11,49 @@ import com.google.android.material.card.MaterialCardView
 import android.widget.Toast
 import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.event.CalendarBottomSheetFragment
-import com.example.infinito.ui.event.OnDateSelectedListener // Importa l'interfaccia
+import com.example.infinito.ui.event.OnDateSelectedListener
 import com.example.infinito.ui.fragment.BottomBarFragment
+import com.example.infinito.ui.event.TimeBottomSheetFragment
+import com.example.infinito.ui.event.OnTimeSelectedListener
 import com.example.infinito.ui.fragment.HeaderFragment
 import java.time.LocalDate // Richiede Android API Level 26+
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-private lateinit var selectedDateTextView: TextView
 
-class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener { // Implementa l'interfaccia
+
+class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeSelectedListener  { // Implementa l'interfaccia
 
     // Tutte le dichiarazioni lateinit var
     private lateinit var detailImageView: ImageView
     private lateinit var detailTitleTextView: TextView
     private lateinit var detailDescriptionTextView: TextView
     private lateinit var buyButton: MaterialButton
-    private lateinit var userIcon: ImageView
-    private lateinit var bookmarkIcon: ImageView
-    private lateinit var logoText: TextView
 
     private lateinit var calendarCardButton: MaterialCardView
     private lateinit var timeCardButton: MaterialCardView
     private lateinit var priceCardButton: MaterialCardView
 
+    private lateinit var selectedDateTextView: TextView
+    private lateinit var selectedTimeTextView: TextView
 
 
-    // Variabile per memorizzare la data scelta
+    private var currentEvent: EventItem? = null // per tenere traccia dell'evento corrente
+
     private var selectedEventDate: LocalDate? = null
+    private var selectedEventTime: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_detail)
 
-        // Inizializza tutte le viste con findViewById
         detailImageView = findViewById(R.id.detailImageView)
         detailTitleTextView = findViewById(R.id.detailTitleTextView)
         detailDescriptionTextView = findViewById(R.id.detailDescriptionTextView)
         buyButton = findViewById(R.id.buyButton)
 
         selectedDateTextView = findViewById(R.id.selectedDateTextView)
+        selectedTimeTextView = findViewById(R.id.selectedTimeTextView)
 
 
         supportFragmentManager
@@ -70,6 +73,7 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener { // Imp
         }
 
         event?.let {
+            currentEvent = it // Salva l'evento corrente
             detailImageView.setImageResource(it.imageResId)
             detailTitleTextView.text = it.title
             detailDescriptionTextView.text = it.longDescription
@@ -79,12 +83,25 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener { // Imp
         calendarCardButton.setOnClickListener {
             // Crea e mostra il Bottom Sheet del calendario
             val calendarBottomSheet = CalendarBottomSheetFragment()
-            calendarBottomSheet.onDateSelectedListener = this // Imposta l'Activity come listener
+            calendarBottomSheet.onDateSelectedListener = this
             calendarBottomSheet.show(supportFragmentManager, calendarBottomSheet.tag)
         }
 
         timeCardButton.setOnClickListener {
-            Toast.makeText(this, "Modale Orario: ${event?.timeInfo}", Toast.LENGTH_LONG).show()
+            val timeBottomSheet = TimeBottomSheetFragment()
+            timeBottomSheet.onTimeSelectedListener = this
+            timeBottomSheet.show(supportFragmentManager, timeBottomSheet.tag)
+        }
+
+        timeCardButton.setOnClickListener {
+            currentEvent?.let { eventItem ->
+                // Passa gli orari specifici dell'evento al TimeBottomSheetFragment
+                val timeBottomSheet = TimeBottomSheetFragment.newInstance(eventItem.availableTimes)
+                timeBottomSheet.onTimeSelectedListener = this
+                timeBottomSheet.show(supportFragmentManager, timeBottomSheet.tag)
+            } ?: run {
+                Toast.makeText(this, "Errore: Dati evento non disponibili per gli orari.", Toast.LENGTH_SHORT).show()
+            }
         }
 
         priceCardButton.setOnClickListener {
@@ -93,25 +110,33 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener { // Imp
 
 
         buyButton.setOnClickListener {
-            selectedEventDate?.let { date ->
-                Toast.makeText(this, "Data scelta: ${date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))}", Toast.LENGTH_SHORT).show()
-                // QUI puoi passare la 'date' ad altre schermate o logiche
-                // Esempio: Invia la data a una nuova Activity
+            if (selectedEventDate != null && selectedEventTime != null) {
+                val formattedDate = selectedEventDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+                // Toast.makeText(this, "Data scelta: $formattedDate, Ora: $selectedEventTime", Toast.LENGTH_LONG).show()
+                // QUI puoi passare 'selectedEventDate' e 'selectedEventTime' ad altre schermate
+                // Esempio:
                 // val intent = Intent(this, NextActivity::class.java)
-                // intent.putExtra("selected_date", date.toString()) // LocalDate deve essere convertita in Stringa per Extra
+                // intent.putExtra("selectedDate", selectedEventDate.toString()) // Converti a stringa per Intent
+                // intent.putExtra("selectedTime", selectedEventTime)
                 // startActivity(intent)
-            } ?: run {
-                Toast.makeText(this, "Seleziona prima una data dal calendario!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Seleziona una data e un orario!", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    // Implementazione dell'interfaccia OnDateSelectedListener
+
     override fun onDateSelected(selectedDate: LocalDate) {
         this.selectedEventDate = selectedDate
         // Formatta la data per visualizzarla
-        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ITALIAN) // Esempio: "25 Luglio 2025"
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ITALIAN)
         selectedDateTextView.text = selectedDate.format(formatter) // Aggiorna il testo del TextView
-        Toast.makeText(this, "Data selezionata in Activity: ${selectedDate.format(formatter)}", Toast.LENGTH_LONG).show()
+        // Toast.makeText(this, "Data selezionata : ${selectedDate.format(formatter)}", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onTimeSelected(selectedTime: String) {
+        this.selectedEventTime = selectedTime
+        selectedTimeTextView.text = selectedTime
+        // Toast.makeText(this, "Orario selezionato : $selectedTime", Toast.LENGTH_SHORT).show()
     }
 }
