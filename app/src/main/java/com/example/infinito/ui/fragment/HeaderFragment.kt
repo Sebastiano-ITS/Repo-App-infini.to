@@ -1,11 +1,14 @@
 package com.example.infinito.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.example.infinito.R
+import com.example.infinito.ui.profile.ProfileActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +39,16 @@ class HeaderFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_header, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val profileIcon = view.findViewById<ImageView>(R.id.profileIcon)
+        profileIcon.setOnClickListener {
+            val profileIntent = Intent(view.context, ProfileActivity::class.java)
+            startActivity(profileIntent)
+        }
     }
 
     companion object {

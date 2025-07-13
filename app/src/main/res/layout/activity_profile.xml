@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="#000000"
+android:fitsSystemWindows="true"
+tools:context=".ui.profile.ProfileActivity">
+
+<!-- Profile Card -->
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="32dp"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#000000"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#FFFFFF"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:background="@drawable/edittext_border_white"
+        android:gravity="center">
+
+        <!-- Profile Icon -->
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/person"
+            android:padding="8dp" />
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mario Rossi"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:fontFamily="@font/orbitron"
+            android:textStyle="normal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mario.rossi@gmail.com"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/orbitron"
+            android:alpha="0.7" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+<!-- Preferiti Option -->
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="32dp"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="#000000"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#FFFFFF"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:background="@drawable/edittext_border_white"
+        android:gravity="center_vertical">
+
+        <!-- Bookmark Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bookmark"
+            android:layout_marginEnd="16dp"
+            app:tint="#00BCD4" />
+
+        <!-- Preferiti Text -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Biglietti Acquistati"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/orbitron"
+            android:textSize="18sp" />
+
+        <!-- Arrow Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!-- Language Option -->
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="32dp"
+    android:layout_marginBottom="32dp"
+    app:cardBackgroundColor="#000000"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#FFFFFF"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:background="@drawable/edittext_border_white"
+        android:gravity="center_vertical">
+
+        <!-- Globe Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_language"
+            android:layout_marginEnd="16dp"
+            app:tint="#00BCD4" />
+
+        <!-- Lingua Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lingua"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="@font/orbitron"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Italiano Text -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Italiano"
+            android:fontFamily="@font/orbitron"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <!-- Flag Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_flag_it"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Arrow Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_forward"
+            app:tint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+<!-- Spacer -->
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+<!-- Cambia Account Button -->
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_margin="32dp"
+    android:text="Esci dall'account"
+    android:textColor="#000000"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:backgroundTint="@null"
+    android:fontFamily="@font/orbitron"
+    android:background="@drawable/button_rounded_white"
+    android:elevation="0dp" />
+
+<!-- Rimuovi Account Button -->
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginBottom="64dp"
+    android:layout_marginHorizontal="32dp"
+    android:text="Rimuovi Account"
+    android:textColor="#FF0000"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:backgroundTint="@null"
+    android:fontFamily="@font/orbitron"
+    android:background="@drawable/button_outline_red"
+    android:elevation="0dp" />
+
+</LinearLayout>
