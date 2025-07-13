@@ -23,23 +23,22 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="16dp"
-            android:layout_marginTop="70dp">
+            android:paddingBottom="16dp">
 
             <ImageView
                 android:id="@+id/detailImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="16dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -96,6 +95,7 @@
                             android:layout_height="24dp"
                             android:layout_marginStart="16dp"
                             android:src="@drawable/ic_calendar"
+                            app:flow_verticalAlign="center"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -110,6 +110,7 @@
                             android:textColor="@color/white"
                             android:textSize="16sp"
                             app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintHorizontal_bias="0.459"
                             app:layout_constraintStart_toEndOf="@id/iconCalendar"
                             app:layout_constraintTop_toTopOf="@id/iconCalendar" />
 
@@ -118,14 +119,16 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginTop="2dp"
                             android:text="Nessuna data selezionata"
                             android:textColor="#CCCCCC"
                             android:textSize="14sp"
+                            android:layout_marginTop="20dp"
                             app:layout_constraintBottom_toBottomOf="@id/iconCalendar"
                             app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintHorizontal_bias="0.434"
                             app:layout_constraintStart_toEndOf="@id/iconCalendar"
-                            app:layout_constraintTop_toBottomOf="@id/textCalendarLabel" />
+                            app:layout_constraintTop_toBottomOf="@id/textCalendarLabel"
+                            app:layout_constraintVertical_bias="0.578" />
 
                         <ImageView
                             android:id="@+id/arrowCalendar"
@@ -169,6 +172,7 @@
                             android:layout_height="24dp"
                             android:layout_marginStart="16dp"
                             android:src="@drawable/ic_time"
+                            app:flow_verticalAlign="center"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -186,6 +190,20 @@
                             app:layout_constraintEnd_toStartOf="@+id/arrowTime"
                             app:layout_constraintStart_toEndOf="@id/iconTime"
                             app:layout_constraintTop_toTopOf="@id/iconTime" />
+
+                        <TextView
+                            android:id="@+id/selectedTimeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Nessun orario selezionato"
+                            android:textColor="#CCCCCC"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconTime"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowTime"
+                            app:layout_constraintStart_toEndOf="@id/iconTime"
+                            app:layout_constraintTop_toBottomOf="@id/textTimeLabel" />
 
                         <ImageView
                             android:id="@+id/arrowTime"
@@ -305,19 +323,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
-                android:fontFamily="@font/orbitron"
+                android:layout_marginTop="32dp"
                 android:text="Acquista"
                 android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                android:fontFamily="@font/orbitron"
                 android:textFontWeight="800"
                 android:textSize="18dp"
-                app:backgroundTint="@color/white"
                 app:cornerRadius="24dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView"
-                app:strokeColor="#FFFFFF" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
