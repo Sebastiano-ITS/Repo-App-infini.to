@@ -1,5 +1,6 @@
 package com.example.infinito.ui.event
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
+import com.example.infinito.ui.event_detail.EventDetailActivity
 
 class CardAdapter(private val cardList: List<CardItem>) :
     RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
@@ -30,7 +32,8 @@ class CardAdapter(private val cardList: List<CardItem>) :
         holder.titleTextView.text = currentItem.title
 
         holder.learnMoreButton.setOnClickListener {
-            Toast.makeText(holder.itemView.context, "Hai cliccato su: ${currentItem.title}", Toast.LENGTH_SHORT).show()
+            val eventDetailIntent = Intent(holder.itemView.context, EventDetailActivity::class.java)
+            holder.itemView.context.startActivity(eventDetailIntent)
         }
     }
 
