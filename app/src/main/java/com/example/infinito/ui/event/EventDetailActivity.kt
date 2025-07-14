@@ -11,6 +11,7 @@ import com.google.android.material.card.MaterialCardView
 import android.widget.Toast
 import com.example.infinito.data.model.TariffDetail
 import com.example.infinito.ui.fragment.HeaderFragment
+import com.example.infinito.utils.theme.setFixedTheme
 import java.time.LocalDate // Richiede Android API Level 26+
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -45,6 +46,7 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_detail)
+        setFixedTheme(this, window)
 
         detailImageView = findViewById(R.id.detailImageView)
         detailTitleTextView = findViewById(R.id.detailTitleTextView)
