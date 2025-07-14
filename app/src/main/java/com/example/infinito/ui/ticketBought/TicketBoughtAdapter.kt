@@ -12,7 +12,7 @@ class TicketBoughtAdapter(private val ticketsBought: ArrayList<TicketDetailModel
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.ticket_recycler_view_not_working, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.ticket_recycler_view, parent, false)
         return ViewHolder(view)
     }
 
