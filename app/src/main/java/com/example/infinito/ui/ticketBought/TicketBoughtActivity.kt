@@ -8,7 +8,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
+import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.data.model.TicketDetailModel
+import com.example.infinito.ui.fragment.BottomBarFragment
+import com.example.infinito.ui.fragment.HeaderFragment
 
 class TicketBoughtActivity : AppCompatActivity() {
 
@@ -19,7 +22,8 @@ class TicketBoughtActivity : AppCompatActivity() {
 
         var numberOfTickets = 1
         val ticketBoughtArray = ArrayList<TicketDetailModel>()
-        val ticketBought = TicketDetailModel("Serata Osservativa","25/07/2025", "14:30","Intera", 14.00)
+        val ticketBought =
+            TicketDetailModel("Serata Osservativa", "25/07/2025", "14:30", "Intera", 14.00)
 
         for (i in 1..numberOfTickets) {
             ticketBoughtArray.add(ticketBought)
@@ -28,8 +32,5 @@ class TicketBoughtActivity : AppCompatActivity() {
         val ticketList = findViewById<RecyclerView>(R.id.ticketRecyclerView)
         ticketList.adapter = TicketBoughtAdapter(ticketBoughtArray)
         ticketList.layoutManager = LinearLayoutManager(this)
-
     }
-
-
 }
