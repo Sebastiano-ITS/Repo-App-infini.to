@@ -23,4 +23,18 @@
     <string name="Articoli_ed_approfondimenti">Articoli ed approfondimenti</string>
     <string name="Carica_più_articoli">Carica più articoli</string>
     <string name="description_event">"- Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari).\n\n- Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)\n\n- L'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)"</string>
+
+
+    <!-- Strings for Eventi dettagli -->
+    <string name="detailTitleTextView">PLANETARIO + TELESCOPIO</string>
+    <string name="textCalendarLabel">calendario</string>
+    <string name="selectedDateTextView">Nessuna data selezionata</string>
+    <string name="textTimeLabel">orario</string>
+    <string name="selectedTimeTextView">Nessun orario selezionato</string>
+    <string name="descriptionTitle">Descrizione</string>
+    <string name="textPriceLabel">tariffa</string>
+    <string name="selectedTariffTextView">Nessuna tariffa selezionata</string>
+    <string name="buyButton">Acquista</string>
+
+
 </resources>
