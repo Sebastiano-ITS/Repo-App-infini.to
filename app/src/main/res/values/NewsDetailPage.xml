@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header con logo -->
+
+        <ImageView
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/infini_to_logo" />
+
+        <!-- Icona profilo (placeholder) -->
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_profile_placeholder"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Fascia azzurra -->
+        <ImageView
+            android:id="@+id/blue_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scopri l’universo con noi!"
+            android:background="#D0E8F9"
+            android:padding="16dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif" />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/giornatanazionaledellospazio"
+            android:padding="16dp" />
+
+        <!-- Linea bianca di separazione -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Titolo sezione evento -->
+        <TextView
+            android:id="@+id/event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L’Italia nello Spazio: dagli esordi al futuro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#62c9d9"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Paragrafi descrittivi -->
+        <TextView
+            android:id="@+id/description_paragraph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dal 2021, ogni 16 dicembre celebriamo la Giornata Nazionale dello Spazio. L’Italia è stato il quinto Paese al mondo a lanciare un satellite — il San Marco 1 nel 1964."
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/description_paragraph2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L’Agenzia Spaziale Italiana accompagna ancora oggi questa avventura tra ricerca, innovazione e scienza. Pronti, partenza... via!"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Pulsante “Scopri di più” -->
+        <Button
+            android:id="@+id/discover_button"
+            android:layout_width="269dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Scopri di più"
+            android:textColor="#000000" />
+
+        <!-- Bottom Bar -->
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#000000">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_marginStart="32dp" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_ticket"
+                android:layout_marginStart="32dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

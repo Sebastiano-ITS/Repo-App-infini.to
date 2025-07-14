@@ -28,5 +28,5 @@ material-v1120 = { module = "com.google.android.material:material", version.ref 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.9.24" }
 
