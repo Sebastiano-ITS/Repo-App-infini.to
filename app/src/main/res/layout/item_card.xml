@@ -2,6 +2,7 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
@@ -11,7 +12,10 @@
     app:cardBackgroundColor="#1A1A1A"
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
-    app:strokeColor="#FFFFFF"        app:strokeWidth="1dp">           <androidx.constraintlayout.widget.ConstraintLayout
+    app:strokeColor="#FFFFFF"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 

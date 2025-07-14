@@ -2,225 +2,293 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:fitsSystemWindows="true">
+    android:background="@color/black"
+    tools:context=".ui.event.EventDetailActivity">
 
-    <!-- Header fisso -->
+        <!-- HEADER FRAGMENT CONTAINER -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- ScrollView per il contenuto scrollabile -->
+
     <ScrollView
-        android:layout_width="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
 
-            <!-- Main Image Container -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/planetario_telescopio" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/edittext_border_white"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/planetario_telescopio"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- Title -->
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/detailTitleTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/orbitron"
-                android:text="PLANETARIO + TELESCOPIO"
                 android:textColor="@color/cyan"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+                app:layout_constraintTop_toBottomOf="@id/detailImageView"
+                tools:text="PLANETARIO + TELESCOPIO" />
 
-            <!-- Menu Items Container -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_menu"
+            <LinearLayout
+                android:id="@+id/interactiveButtonsLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_title">
+                app:layout_constraintTop_toBottomOf="@id/detailTitleTextView">
 
-                <!-- Calendario -->
-                <ImageView
-                    android:id="@+id/iv_calendar"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/calendar"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_calendar"
-                    android:layout_width="0dp"
+                <!-- Bottone Calendario -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/calendarCardButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"> <!-- Rimuovi il bordo o imposta a 0dp -->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/iconCalendar"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_calendar"
+                            app:flow_verticalAlign="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textCalendarLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="calendario"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintHorizontal_bias="0.459"
+                            app:layout_constraintStart_toEndOf="@id/iconCalendar"
+                            app:layout_constraintTop_toTopOf="@id/iconCalendar" />
+
+                        <TextView
+                            android:id="@+id/selectedDateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Nessuna data selezionata"
+                            android:textColor="#CCCCCC"
+                            android:textSize="14sp"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconCalendar"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowCalendar"
+                            app:layout_constraintHorizontal_bias="0.434"
+                            app:layout_constraintStart_toEndOf="@id/iconCalendar"
+                            app:layout_constraintTop_toBottomOf="@id/textCalendarLabel"
+                            app:layout_constraintVertical_bias="0.578" />
+
+                        <ImageView
+                            android:id="@+id/arrowCalendar"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Separatore Linea Bianca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:gravity="center"
-                    android:text="calendario"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
-                    app:layout_constraintEnd_toStartOf="@id/iv_arrow_calendar"
-                    app:layout_constraintStart_toEndOf="@id/iv_calendar"
-                    app:layout_constraintTop_toTopOf="@id/iv_calendar" />
+                    android:background="#FFFFFF" />
 
-                <ImageView
-                    android:id="@+id/iv_arrow_calendar"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/iv_calendar" />
-
-                <!-- Divider 1 -->
-                <View
-                    android:id="@+id/divider_1"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_calendar" />
-
-                <!-- Orario -->
-                <ImageView
-                    android:id="@+id/iv_clock"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/stopwatch"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/divider_1" />
-
-                <TextView
-                    android:id="@+id/tv_clock"
-                    android:layout_width="0dp"
+                <!-- Bottone Orario -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/timeCardButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/iconTime"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_time"
+                            app:flow_verticalAlign="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textTimeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="orario"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconTime"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowTime"
+                            app:layout_constraintStart_toEndOf="@id/iconTime"
+                            app:layout_constraintTop_toTopOf="@id/iconTime" />
+
+                        <TextView
+                            android:id="@+id/selectedTimeTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Nessun orario selezionato"
+                            android:textColor="#CCCCCC"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconTime"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowTime"
+                            app:layout_constraintStart_toEndOf="@id/iconTime"
+                            app:layout_constraintTop_toBottomOf="@id/textTimeLabel" />
+
+                        <ImageView
+                            android:id="@+id/arrowTime"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Separatore Linea Bianca -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:gravity="center"
-                    android:text="orario"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_clock"
-                    app:layout_constraintEnd_toStartOf="@id/iv_arrow_clock"
-                    app:layout_constraintStart_toEndOf="@id/iv_clock"
-                    app:layout_constraintTop_toTopOf="@id/iv_clock" />
+                    android:background="#FFFFFF" />
 
-                <ImageView
-                    android:id="@+id/iv_arrow_clock"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_clock"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/iv_clock" />
-
-                <!-- Divider 2 -->
-                <View
-                    android:id="@+id/divider_2"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_clock" />
-
-                <!-- Tariffa -->
-                <ImageView
-                    android:id="@+id/iv_euro"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/currency_euro"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/divider_2" />
-
-                <TextView
-                    android:id="@+id/tv_euro"
-                    android:layout_width="0dp"
+                <!-- Bottone Tariffa -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/priceCardButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp"> <!-- Rimuovi il bordo o imposta a 0dp -->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp">
+
+                        <ImageView
+                            android:id="@+id/iconPrice"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_price"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textPriceLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="tariffa"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconPrice"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowPrice"
+                            app:layout_constraintStart_toEndOf="@id/iconPrice"
+                            app:layout_constraintTop_toTopOf="@id/iconPrice" />
+
+                        <ImageView
+                            android:id="@+id/arrowPrice"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_arrow_forward"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:gravity="center"
-                    android:text="tariffa"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_euro"
-                    app:layout_constraintEnd_toStartOf="@id/iv_arrow_euro"
-                    app:layout_constraintStart_toEndOf="@id/iv_euro"
-                    app:layout_constraintTop_toTopOf="@id/iv_euro" />
+                    android:background="#FFFFFF" />
+            </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/iv_arrow_euro"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_arrow_forward"
-                    app:layout_constraintBottom_toBottomOf="@id/iv_euro"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/iv_euro" />
-
-                <!-- Divider 3 -->
-                <View
-                    android:id="@+id/divider_3"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
-                    android:background="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/iv_euro" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- Description Title -->
             <TextView
-                android:id="@+id/tv_description_title"
+                android:id="@+id/descriptionTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -229,83 +297,47 @@
                 android:fontFamily="@font/orbitron"
                 android:text="Descrizione"
                 android:textColor="@color/cyan"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_menu" />
+                app:layout_constraintTop_toBottomOf="@id/interactiveButtonsLayout" />
 
-            <!-- Description Text 1 -->
             <TextView
-                android:id="@+id/tv_description_1"
+                android:id="@+id/detailDescriptionTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:lineSpacingMultiplier="1.2"
-                android:text="- Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari)."
+                android:lineSpacingExtra="4dp"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_description_title" />
+                app:layout_constraintTop_toBottomOf="@id/descriptionTitle"
+                tools:text="@string/description_event" />
 
-            <!-- Description Text 2 -->
-            <TextView
-                android:id="@+id/tv_description_2"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buyButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
-                android:lineSpacingMultiplier="1.2"
-                android:text="- Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_description_1" />
-
-            <!-- Description Text 3 -->
-            <TextView
-                android:id="@+id/tv_description_3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:lineSpacingMultiplier="1.2"
-                android:text="- L'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_description_2" />
-
-            <!-- Acquista Button -->
-            <Button
-                android:id="@+id/btn_acquista"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/button_rounded_white"
-                android:fontFamily="@font/orbitron"
                 android:text="Acquista"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:backgroundTint="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:backgroundTint="@color/white"
+                android:fontFamily="@font/orbitron"
+                android:textFontWeight="800"
+                android:textSize="18dp"
+                app:cornerRadius="24dp"
+                app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_description_3" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

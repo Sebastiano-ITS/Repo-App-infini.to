@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="time_button_padding">12dp</dimen>
+    <dimen name="time_button_margin">8dp</dimen>
+
+</resources>
