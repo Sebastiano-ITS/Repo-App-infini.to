@@ -7,11 +7,16 @@
     <string name="surnameLabel">Cognome</string>
     <string name="emailLabel">Email</string>
     <string name="passwordLabel">Password</string>
+    <string name="passwordEditText">Inserisci Password</string>
     <string name="confirmPasswordLabel">Conferma Password</string>
     <string name="otherwiseLabel">Oppure</string>
     <string name="googleButtonLabel">Accedi con Google</string>
     <string name="notSignedLabel">Non hai ancora un account?\n<u>Registrati</u></string>
+    <string name="alreadySignedLabel">Possiedi già un account?\n<u>Accedi</u></string>
     <string name="loginButtonLabel">Accedi</string>
 
+    <!-- Strings for Profile -->
+    <string name="changeProfileButtonLabel">Cambia account</string>
+    <string name="deleteProfileButtonLabel">Rimuovi account</string>
 
 </resources>

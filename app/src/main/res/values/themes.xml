@@ -13,5 +13,12 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textColorHint">@android:color/white</item>
     </style>
+    <style name="RedOutlinedButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@android:color/red</item>
+        <item name="strokeColor">@android:color/red</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+    </style>
 
 </resources>
