@@ -266,6 +266,20 @@
                             app:layout_constraintStart_toEndOf="@id/iconPrice"
                             app:layout_constraintTop_toTopOf="@id/iconPrice" />
 
+                        <TextView
+                            android:id="@+id/selectedTariffTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Nessuna tariffa selezionata"
+                            android:textColor="#CCCCCC"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@id/iconPrice"
+                            app:layout_constraintEnd_toStartOf="@+id/arrowPrice"
+                            app:layout_constraintStart_toEndOf="@id/iconPrice"
+                            app:layout_constraintTop_toBottomOf="@id/textPriceLabel" />
+
                         <ImageView
                             android:id="@+id/arrowPrice"
                             android:layout_width="24dp"
