@@ -1,9 +1,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="153dp"
+    android:layout_height="150dp"
     android:background="@drawable/ticket_background">
 
     <ImageView
@@ -11,71 +10,78 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="8dp"
-        android:src=""
+        android:src="@drawable/telescope_event_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleEventText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/custom_text_style_ticket_event"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/orbitron"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Titolo"
-        android:textColor="@color/cyan"
-        android:textFontWeight="600"
-        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/dateTicketText"
+        app:layout_constraintEnd_toStartOf="@+id/topCutView"
         app:layout_constraintStart_toEndOf="@+id/eventImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dateTicketText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/custom_text_style_ticket"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/orbitron"
         android:text="25/07/2025"
-        android:textColor="@color/white"
-        android:textFontWeight="600"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/timeTicketText"
-        app:layout_constraintStart_toStartOf="@+id/titleEventText" />
+        app:layout_constraintEnd_toEndOf="@+id/timeTicketText"
+        app:layout_constraintStart_toStartOf="@+id/timeTicketText" />
 
     <TextView
         android:id="@+id/timeTicketText"
-        android:layout_width="wrap_content"
+        style="@style/custom_text_style_ticket"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/orbitron"
         android:text="14:30"
-        android:textColor="@color/white"
-        android:textFontWeight="600"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/typePriceTicketText"
-        app:layout_constraintStart_toStartOf="@+id/dateTicketText" />
+        app:layout_constraintBottom_toTopOf="@+id/typeTicketText"
+        app:layout_constraintEnd_toEndOf="@+id/typeTicketText"
+        app:layout_constraintStart_toStartOf="@+id/typeTicketText" />
 
     <TextView
-        android:id="@+id/typePriceTicketText"
-        android:layout_width="wrap_content"
+        android:id="@+id/typeTicketText"
+        style="@style/custom_text_style_ticket"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/orbitron"
-        android:text="Intera - € 14,00"
-        android:textColor="@color/white"
-        android:textFontWeight="600"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Intera"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/timeTicketText" />
+        app:layout_constraintEnd_toStartOf="@+id/priceTicketText"
+        app:layout_constraintStart_toEndOf="@+id/eventImage" />
 
-    <ImageView
+    <TextView
+        android:id="@+id/priceTicketText"
+        style="@style/custom_text_style_ticket"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="€ 14,00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottomCutView" />
+
+    <View
         android:id="@+id/lineView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="108dp"
+        android:background="@drawable/line_separator"
         android:rotation="90"
-        android:src="@drawable/line_separator"
         app:layout_constraintBottom_toTopOf="@+id/bottomCutView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,5 +106,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/lineView"
         app:layout_constraintStart_toStartOf="@+id/lineView" />
+
+    <ImageView
+        android:id="@+id/qrcodeTicketImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="-14dp"
+        android:src="@drawable/qrcode_ticket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topCutView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

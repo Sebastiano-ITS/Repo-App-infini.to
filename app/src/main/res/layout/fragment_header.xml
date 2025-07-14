@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:paddingTop="20dp"
     android:paddingBottom="20dp"
-    tools:context=".ui.fragment.HeaderFragment">
+    tools:context=".ui.fragment.HeaderFragment"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/headerTitle"
