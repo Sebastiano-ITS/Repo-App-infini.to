@@ -2,7 +2,6 @@ package com.example.infinito.ui.start
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.AttributeSet
 import android.widget.Button
@@ -10,10 +9,9 @@ import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.content.edit
 import androidx.core.net.toUri
 import com.example.infinito.R
-import com.example.infinito.ui.home.HomeActivity
+import com.example.infinito.ui.signup.SignUpActivity
 import com.example.infinito.utils.theme.setFixedTheme
 
 class FullscreenVideoView(context: Context, attrs: AttributeSet?) : VideoView(context, attrs) {
@@ -37,7 +35,7 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
         setFixedTheme(this, window)
 
-        window.statusBarColor = ContextCompat.getColor(this, R.color.black)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.black2)
 
         videoBackground = findViewById(R.id.videoBackground)
         startButton = findViewById(R.id.startButton)
@@ -51,8 +49,8 @@ class StartActivity : AppCompatActivity() {
         }
 
         startButton.setOnClickListener {
-            val homeIntent = Intent(this, HomeActivity::class.java)
-            startActivity(homeIntent)
+            val registerIntent = Intent(this, SignUpActivity::class.java)
+            startActivity(registerIntent)
             finish()
         }
     }

@@ -135,7 +135,7 @@
         app:layout_constraintStart_toStartOf="@+id/leftGuide" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/registerTextBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"

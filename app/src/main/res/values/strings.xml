@@ -11,7 +11,9 @@
     <string name="otherwiseLabel">Oppure</string>
     <string name="googleButtonLabel">Accedi con Google</string>
     <string name="notSignedLabel">Non hai ancora un account?\n<u>Registrati</u></string>
+    <string name="signedLabel">Hai già un account?\n<u>Accedi</u></string>
     <string name="loginButtonLabel">Accedi</string>
+    <string name="signupButtonLabel">Registrati</string>
 
     <!-- Strings for Eventi -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -22,4 +24,10 @@
     <string name="Title_news">Italia nello spazio</string>
     <string name="Articoli_ed_approfondimenti">Articoli ed approfondimenti</string>
     <string name="Carica_più_articoli">Carica più articoli</string>
+    
+    <!-- Errori nel form -->
+    <string name="requiredInputFieldError">questo campo è obbligatorio</string>
+    <string name="IncorrectEmailError">L\'email inserita non è valida</string>
+    <string name="IncorrectPasswordError">La password deve contenere almeno 8 caratteri, 1 maiuscola, 1 carattere speciale e 2 numeri</string>
+    <string name="IncorrectPasswordMatchError">Le password non corrispondono</string>
 </resources>
