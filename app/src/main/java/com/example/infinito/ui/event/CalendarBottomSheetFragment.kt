@@ -62,7 +62,7 @@ class CalendarBottomSheetFragment : BottomSheetDialogFragment() {
 
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             selectedDate = LocalDate.of(year, month + 1, dayOfMonth)
-            Toast.makeText(context, "Data selezionata: ${selectedDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))}", Toast.LENGTH_SHORT).show()
+            // Toast.makeText(context, "Data selezionata: ${selectedDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))}", Toast.LENGTH_SHORT).show()
         }
 
         confirmButton.setOnClickListener {
