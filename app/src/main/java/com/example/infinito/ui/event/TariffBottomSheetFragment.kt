@@ -92,7 +92,7 @@ class TariffBottomSheetFragment : BottomSheetDialogFragment() {
 
 
             val tariffTextView = TextView(context).apply {
-                text = tariff.displayName
+                text = tariff.getDisplayName(requireContext())
                 textSize = 16f
                 gravity = View.TEXT_ALIGNMENT_GRAVITY
                 setTextColor(ContextCompat.getColor(requireContext(), R.color.white)) // Testo bianco di default

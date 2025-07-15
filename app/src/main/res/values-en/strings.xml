@@ -20,6 +20,89 @@
     <string name="buy_button">Buy</string>
     <string name="event_image_description">Event details image</string>
 
+    <string name="title_planetario">
+        PLANETARIUM + TELESCOPE (new observational evening)
+    </string>
+    <string name="title_astrotalk">
+        MUSEUM + ASTROTALK
+    </string>
+    <string name="title_bambini">
+        SPACE FOR CHILDREN (first weekend of the month only)
+    </string>
+    <string name="title_cinema">
+        CINEMA UNDER THE STARS evening opening
+    </string>
+
+    <string name="planetario_telescopio_long_description">
+        - Free museum visit (30 minutes), with audio guide available on smartphone (bring headphones).\n\n
+        - Seasonal sky show in the digital planetarium (30 minutes)\n\n
+        - Stargazing with naked eye and telescope from the terrace (45 minutes)
+    </string>
+
+    <string name="museo_astrotalk_long_description">
+        A series of meetings with scientists and researchers exploring the Universe. From meteorites falling on Earth to the most distant galaxies, through the Solar System, black holes and cosmic rays.\n\n
+        Astrotalks are lecture-shows that combine the latest research in astronomy and science with spectacular images from the digital Planetarium. \n \n \n
+        What the ticket includes \n \n
+        - The Astrotalk in the planetarium (45 minutes)\n
+        - A planetarium show (30 minutes)\n
+        - Free visit to the interactive museum (1h)\n
+        - Audio guide available on smartphone (bring headphones)\n \n
+        What the ticket does not include \n
+        - Guided tour of the interactive museum
+    </string>
+
+    <string name="spazio_bambini_long_description">
+        The first weekend of each month, with three visiting slots: arrival at 2:30 PM*, 4:00 PM* or 5:30 PM\n
+        \n
+        *To the 2:30 PM or 4:00 PM entrance ticket, you can add the 6-11 year old funlab (paid activity for children aged 6-11, one adult accompanies for free)\n \n
+        What the ticket includes\n
+        - Free visit to the interactive museum (1h);\n
+        - Audio guide available on smartphone (bring headphones);\n
+        - A planetarium show dedicated to children (30 minutes).\n \n
+        What the ticket does not include\n
+        - The 6-11 year old funlab workshop (1h). Must be added to the entrance ticket (child pays + adult accompanies for free);\n
+        - The guided tour of the interactive museum.\n
+    </string>
+
+    <string name="cinema_sotto_stelle_long_description">
+        Enjoy a magical evening with space-themed film screenings under the starry sky. \n
+        A unique cinematic experience that combines the charm of the big screen with the beauty of the universe.\n
+        Bring your blanket and get ready to travel among the stars!
+    </string>
+
+    <!-- Tariff types -->
+    <string name="tariff_tipo_intera">Full</string>
+    <string name="tariff_tipo_ridotto">Reduced</string>
+    <string name="tariff_tipo_gratuito">Free</string>
+    <string name="tariff_tipo_gratuita">Free Admission</string>
+    <string name="tariff_tipo_mondo_parchi">Parks World</string>
+    <string name="tariff_tipo_vivi_parchi">Live Parks</string>
+    <string name="tariff_tipo_adulto">Adult</string>
+    <string name="tariff_tipo_bambino">Child</string>
+
+    <!-- Age ranges -->
+    <string name="tariff_fascia_19_30_anni">19-30 years</string>
+    <string name="tariff_fascia_31_60_anni">31-60 years</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Kids 6-11 years</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Kids 12-18 years</string>
+    <string name="tariff_fascia_over_60">Over 60</string>
+    <string name="tariff_fascia_tessere_enti_convenzionati">Cards/affiliated entities</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Children 3-5 years</string>
+    <string name="tariff_fascia_0_5_anni">0-5 years</string>
+    <string name="tariff_fascia_standard">Standard</string>
+    <string name="tariff_fascia_studente">Student</string>
+
+    <!-- Categories -->
+    <string name="tariff_categoria_disabile">Disabled</string>
+    <string name="tariff_categoria_accompagnatore_disabile">Disabled companion</string>
+    <string name="tariff_categoria_passaporto_culturale">Cultural Passport "Born with Culture"</string>
+    <string name="tariff_categoria_residenti_pino_torinese">Pino Torinese Residents</string>
+    <string name="tariff_categoria_dipendenti_osservatorio">Turin Astrophysical Observatory/ex IFSI employees</string>
+    <string name="tariff_categoria_club_docenti">Infiniti.to Teachers Club</string>
+    <string name="tariff_categoria_abbonamento_musei">Museum Pass</string>
+    <string name="tariff_categoria_torino_piemonte_card">Torino+Piemonte Card</string>
+
+
     <!-- Activity Login/SignUp -->
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>

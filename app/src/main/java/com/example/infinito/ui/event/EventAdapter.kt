@@ -36,7 +36,7 @@ class EventAdapter(
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
         val currentItem = eventList[position]
         holder.imageView.setImageResource(currentItem.imageResId)
-        holder.titleTextView.text = currentItem.title
+        holder.titleTextView.setText(currentItem.title)
 
         // Imposta il clic sull'intera card
         holder.card.setOnClickListener {

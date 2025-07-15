@@ -20,6 +20,92 @@
     <string name="buy_button">Acquista</string>
     <string name="event_image_description">Immagine dettagli evento</string>
 
+
+    <string name="title_planetario">
+        PLANETARIO + TELESCOPIO (nuova serata osservativa)
+    </string>
+    <string name="title_astrotalk">
+        MUSEO + ASTROTALK
+    </string>
+    <string name="title_bambini">
+        LO SPAZIO AI BAMBINI (solo il primo week end del mese)
+    </string>
+    <string name="title_cinema">
+        CINEMA SOTTO LE STELLE apertura serale
+    </string>
+
+
+    <string name="planetario_telescopio_long_description">
+        - Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari).\n\n
+        - Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)\n\n
+        - L\'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)
+    </string>
+
+    <string name="museo_astrotalk_long_description">
+    Un ciclo di incontri con scienziati e ricercatori che esplorano l\'Universo. Dalle meteoriti che cadono sulla Terra alle galassie più lontane, attraverso il Sistema Solare, i buchi neri e i raggi cosmici.\n\n
+    Gli Astrotalk sono conferenze-spettacolo che uniscono le ultime ricerche in campo astronomico e scientifico alle spettacolari immagini del Planetario digitale. \n \n \n
+    Cosa comprende il biglietto \n \n
+    - L\'Astrotalk in planetario (45 minuti)\n
+    - Uno spettacolo del planetario (30 minuti)\n
+    - La visita libera del museo interattivo (1h)\n
+    - L\'audioguida fruibile da smartphone (portare auricolari)\n \n
+    Cosa non comprende il biglietto \n
+    - La visita guidata del museo interattivo
+</string>
+
+    <string name="spazio_bambini_long_description">
+    Il primo weekend di ogni mese, con tre turni di visita: arrivo alle ore 14.30*, 16.00* o 17.30\n
+                    \n
+                    *Al biglietto di ingresso delle 14.30 o delle 16.00 puoi aggiungere il funlab 6-11 anni (attività a pagamento per il bambino 6-11 anni, un adulto accompagna gratis)
+                    \n \n Cosa comprende il biglietto\n
+                    - La visita libera del museo interattivo (1h);\n
+                    - L\'audioguida fruibile da smartphone (portare auricolari);\n
+                    - Uno spettacolo del planetario dedicato ai bambini (30 minuti).
+                    \n \n Cosa non comprende il biglietto\n
+                    - Il laboratorio funlab 6-11 anni (1h). Va aggiunto al biglietto di ingresso (bambino paga + adulto accompagna gratis);\n
+                    - La visita guidata del museo interattivo.\n
+    </string>
+
+    <string name="cinema_sotto_stelle_long_description">
+        Goditi una serata magica con proiezioni di film a tema spaziale sotto il cielo stellato. \n
+        Un\'esperienza cinematografica unica che unisce il fascino del grande schermo alla bellezza dell\'universo.\n
+        Porta la tua coperta e preparati a viaggiare tra le stelle!
+    </string>
+
+    <!-- Tipi di tariffa -->
+    <string name="tariff_tipo_intera">Intera</string>
+    <string name="tariff_tipo_ridotto">Ridotto</string>
+    <string name="tariff_tipo_gratuito">Gratuito</string>
+    <string name="tariff_tipo_gratuita">Gratuità</string>
+    <string name="tariff_tipo_mondo_parchi">Mondo Parchi</string>
+    <string name="tariff_tipo_vivi_parchi">Vivi Parchi</string>
+    <string name="tariff_tipo_adulto">Adulto</string>
+    <string name="tariff_tipo_bambino">Bambino</string>
+
+
+    <!-- Fasce d'età -->
+    <string name="tariff_fascia_19_30_anni">19-30 anni</string>
+    <string name="tariff_fascia_31_60_anni">31-60 anni</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Ragazzi 6-11 anni</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Ragazzi 12-18 anni</string>
+    <string name="tariff_fascia_over_60">Over 60</string>
+    <string name="tariff_fascia_tessere_enti_convenzionati">tessere/enti convenzionati</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Bambini 3-5 anni</string>
+    <string name="tariff_fascia_0_5_anni">0-5 anni</string>
+    <string name="tariff_fascia_standard">Standard</string>
+    <string name="tariff_fascia_studente">Studente</string>
+
+
+    <!-- Categorie -->
+    <string name="tariff_categoria_disabile">Disabile</string>
+    <string name="tariff_categoria_accompagnatore_disabile">Accompagnatore disabile</string>
+    <string name="tariff_categoria_passaporto_culturale">Passaporto culturale "Nati con la Cultura"</string>
+    <string name="tariff_categoria_residenti_pino_torinese">Residenti Pino Torinese</string>
+    <string name="tariff_categoria_dipendenti_osservatorio">dipendenti Osservatorio Astrofisico di Torino/ex IFSI</string>
+    <string name="tariff_categoria_club_docenti">Club Docenti di Infiniti.to</string>
+    <string name="tariff_categoria_abbonamento_musei">Abbonamento Musei</string>
+    <string name="tariff_categoria_torino_piemonte_card">Torino+Piemonte Card</string>
+
     <!-- Activity Login/SignUp -->
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
