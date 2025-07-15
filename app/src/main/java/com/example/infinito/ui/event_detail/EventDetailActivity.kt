@@ -162,6 +162,6 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
     override fun onTariffSelected(selectedTariff: TariffDetail) {
         this.selectedEventTariff = selectedTariff
         selectedTariffTextView.text = "${selectedTariff.getDisplayName(this)} (€${String.format("%.2f", selectedTariff.totale)})"
-        Toast.makeText(this, "Tariffa selezionata: ${selectedTariff.tipo} (Prezzo: €${String.format("%.2f", selectedTariff.totale)})", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(this, "Tariffa selezionata: ${selectedTariff.tipo} (Prezzo: €${String.format("%.2f", selectedTariff.totale)})", Toast.LENGTH_SHORT).show()
     }
 }
