@@ -15,6 +15,7 @@
     <string name="time_label">orario</string>
     <string name="no_time_selected">Nessun orario selezionato</string>
     <string name="price_label">tariffa</string>
+    <string name="no_price_selected">Nessuna tariffa selezionata</string>
     <string name="description_title">Descrizione</string>
     <string name="buy_button">Acquista</string>
     <string name="event_image_description">Immagine dettagli evento</string>

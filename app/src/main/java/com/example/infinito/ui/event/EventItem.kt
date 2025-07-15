@@ -1,5 +1,6 @@
 package com.example.infinito.ui.event
 
+import com.example.infinito.data.model.TariffDetail
 import java.io.Serializable // Per passare l'oggetto via Intent
 
 data class EventItem(
@@ -8,6 +9,6 @@ data class EventItem(
     val title: String,   // Titolo dell'evento
     val calendarInfo: String,
     val availableTimes: List<String>,
-    val priceInfo: String,    // Info tariffa (es. "Adulti: 12€, Bambini: 8€")
+    val availableTariffs: List<TariffDetail>,
     val longDescription: String
 ) : Serializable

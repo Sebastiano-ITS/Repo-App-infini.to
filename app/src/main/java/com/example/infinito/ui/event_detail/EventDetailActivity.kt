@@ -4,24 +4,28 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.infinito.R
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
-import android.widget.Toast
+import com.example.infinito.data.model.TariffDetail
 import com.example.infinito.ui.event.CalendarBottomSheetFragment
 import com.example.infinito.ui.event.EventItem
 import com.example.infinito.ui.event.OnDateSelectedListener
-import com.example.infinito.ui.event.TimeBottomSheetFragment
+import com.example.infinito.ui.event.OnTariffSelectedListener
 import com.example.infinito.ui.event.OnTimeSelectedListener
+import com.example.infinito.ui.event.TariffBottomSheetFragment
+import com.example.infinito.ui.event.TimeBottomSheetFragment
 import com.example.infinito.ui.fragment.HeaderFragment
-import java.time.LocalDate // Richiede Android API Level 26+
+import com.example.infinito.utils.theme.setFixedTheme
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
+import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
 
-
-class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeSelectedListener  { // Implementa l'interfaccia
+class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeSelectedListener,
+    OnTariffSelectedListener { // Implementa l'interfaccia
 
     // Tutte le dichiarazioni lateinit var
     private lateinit var detailImageView: ImageView
@@ -36,15 +40,20 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
     private lateinit var selectedDateTextView: TextView
     private lateinit var selectedTimeTextView: TextView
 
+    private lateinit var selectedTariffTextView: TextView
+
 
     private var currentEvent: EventItem? = null // per tenere traccia dell'evento corrente
 
     private var selectedEventDate: LocalDate? = null
     private var selectedEventTime: String? = null
 
+    private var selectedEventTariff: TariffDetail? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_detail)
+        setFixedTheme(this, window)
 
         detailImageView = findViewById(R.id.detailImageView)
         detailTitleTextView = findViewById(R.id.detailTitleTextView)
@@ -53,6 +62,7 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
 
         selectedDateTextView = findViewById(R.id.selectedDateTextView)
         selectedTimeTextView = findViewById(R.id.selectedTimeTextView)
+        selectedTariffTextView = findViewById(R.id.selectedTariffTextView)
 
 
         supportFragmentManager
@@ -67,7 +77,6 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         val event: EventItem? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             intent.getSerializableExtra("event_item", EventItem::class.java)
         } else {
-            @Suppress("DEPRECATION")
             intent.getSerializableExtra("event_item") as? EventItem
         }
 
@@ -104,22 +113,33 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         }
 
         priceCardButton.setOnClickListener {
-            Toast.makeText(this, "Modale Tariffa: ${event?.priceInfo}", Toast.LENGTH_LONG).show()
+            currentEvent?.let { eventItem ->
+                val tariffBottomSheet =
+                    TariffBottomSheetFragment.newInstance(eventItem.availableTariffs) // Passa le tariffe specifiche
+                tariffBottomSheet.onTariffSelectedListener = this
+                tariffBottomSheet.show(supportFragmentManager, tariffBottomSheet.tag)
+            } ?: run {
+                Toast.makeText(this, "Errore: Dati evento non disponibili per le tariffe.", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
         buyButton.setOnClickListener {
-            if (selectedEventDate != null && selectedEventTime != null) {
+            if (selectedEventDate != null && selectedEventTime != null && selectedEventTariff != null) {
                 val formattedDate = selectedEventDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-                // Toast.makeText(this, "Data scelta: $formattedDate, Ora: $selectedEventTime", Toast.LENGTH_LONG).show()
-                // QUI puoi passare 'selectedEventDate' e 'selectedEventTime' ad altre schermate
+                val tariffName = selectedEventTariff?.tipo
+                val tariffPrice = selectedEventTariff?.totale // Il prezzo è qui!
+
+                Toast.makeText(this, "Data: $formattedDate, Ora: $selectedEventTime, Tariffa: $tariffName (Prezzo: €${String.format("%.2f", tariffPrice)})", Toast.LENGTH_LONG).show()
+                // QUI puoi passare 'selectedEventDate', 'selectedEventTime' e 'selectedEventTariff' ad altre schermate
                 // Esempio:
                 // val intent = Intent(this, NextActivity::class.java)
                 // intent.putExtra("selectedDate", selectedEventDate.toString()) // Converti a stringa per Intent
                 // intent.putExtra("selectedTime", selectedEventTime)
+                // intent.putExtra("selectedTariff", selectedEventTariff) // Passa l'oggetto Tariff completo
                 // startActivity(intent)
             } else {
-                Toast.makeText(this, "Seleziona una data e un orario!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Seleziona una data, un orario e una tariffa!", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -137,5 +157,11 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         this.selectedEventTime = selectedTime
         selectedTimeTextView.text = selectedTime
         // Toast.makeText(this, "Orario selezionato : $selectedTime", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onTariffSelected(selectedTariff: TariffDetail) {
+        this.selectedEventTariff = selectedTariff
+        selectedTariffTextView.text = "${selectedTariff.tipo} (€${String.format("%.2f", selectedTariff.totale)})"
+        Toast.makeText(this, "Tariffa selezionata: ${selectedTariff.tipo} (Prezzo: €${String.format("%.2f", selectedTariff.totale)})", Toast.LENGTH_SHORT).show()
     }
 }
