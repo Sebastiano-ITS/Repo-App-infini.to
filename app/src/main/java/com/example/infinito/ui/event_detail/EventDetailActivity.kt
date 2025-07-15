@@ -127,10 +127,10 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         buyButton.setOnClickListener {
             if (selectedEventDate != null && selectedEventTime != null && selectedEventTariff != null) {
                 val formattedDate = selectedEventDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-                val tariffName = selectedEventTariff?.tipo
-                val tariffPrice = selectedEventTariff?.totale // Il prezzo è qui!
+                val tariffDisplayName = selectedEventTariff?.getDisplayName(this)
+                val tariffTotal = selectedEventTariff?.totale
 
-                Toast.makeText(this, "Data: $formattedDate, Ora: $selectedEventTime, Tariffa: $tariffName (Prezzo: €${String.format("%.2f", tariffPrice)})", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Data: $formattedDate, Ora: $selectedEventTime, Tariffa: $tariffDisplayName  (Prezzo: €${String.format("%.2f", tariffTotal)})", Toast.LENGTH_LONG).show()
                 // QUI puoi passare 'selectedEventDate', 'selectedEventTime' e 'selectedEventTariff' ad altre schermate
                 // Esempio:
                 // val intent = Intent(this, NextActivity::class.java)
@@ -161,7 +161,7 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
 
     override fun onTariffSelected(selectedTariff: TariffDetail) {
         this.selectedEventTariff = selectedTariff
-        selectedTariffTextView.text = "${selectedTariff.tipo} (€${String.format("%.2f", selectedTariff.totale)})"
+        selectedTariffTextView.text = "${selectedTariff.getDisplayName(this)} (€${String.format("%.2f", selectedTariff.totale)})"
         Toast.makeText(this, "Tariffa selezionata: ${selectedTariff.tipo} (Prezzo: €${String.format("%.2f", selectedTariff.totale)})", Toast.LENGTH_SHORT).show()
     }
 }

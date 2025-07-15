@@ -10,5 +10,5 @@ data class EventItem(
     val calendarInfo: String,
     val availableTimes: List<String>,
     val availableTariffs: List<TariffDetail>,
-    val longDescription: String
+    val longDescription: Int
 ) : Serializable
