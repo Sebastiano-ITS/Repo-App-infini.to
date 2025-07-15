@@ -74,8 +74,8 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         event?.let {
             currentEvent = it // Salva l'evento corrente
             detailImageView.setImageResource(it.imageResId)
-            detailTitleTextView.text = it.title
-            detailDescriptionTextView.text = it.longDescription
+            detailTitleTextView.text = getString(it.title)
+            detailDescriptionTextView.text = getString(it.longDescription)
         }
 
         // Settaggio dei listeners

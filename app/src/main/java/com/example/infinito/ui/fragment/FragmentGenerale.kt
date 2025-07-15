@@ -57,55 +57,38 @@ class GeneralFragment : Fragment(), OnEventClickListener { // Implementa l'inter
             EventItem(
                 id = "planetario_telescopio",
                 imageResId = R.drawable.planetario_telescopio,
-                title = "PLANETARIO + TELESCOPIO (nuova serata osservativa)",
+                title = R.string.title_planetario,
                 calendarInfo = "Tutti i weekend",
                 availableTimes = listOf("14:30", "16:00", "17:30", "18:45"),
                 priceInfo = "Adulti: 12€, Bambini: 8€",
-                longDescription = "- Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari).\n\n- Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)\n\n- L'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)"
-            ),
+                longDescription = R.string.planetario_telescopio_long_description,
+                ),
             EventItem(
                 id = "museo_astrotalk",
                 imageResId = R.drawable.museo_astrotalk,
-                title = "MUSEO + ASTROTALK",
+                title = R.string.title_astrotalk,
                 calendarInfo = "Ogni Martedì e Giovedì",
                 availableTimes = listOf("10:30", "11:30", "15:00", "17:00"),
                 priceInfo = "Ingresso: 10€",
-                longDescription = "Un ciclo di incontri con scienziati e ricercatori che esplorano l’Universo. Dalle meteoriti che cadono sulla Terra alle galassie più lontane, attraverso il Sistema Solare, i buchi neri e i raggi cosmici.\n" +
-                        "Gli Astrotalk sono conferenze-spettacolo che uniscono le ultime ricerche in campo astronomico e scientifico alle spettacolari immagini del Planetario digitale. \n \n \n " +
-                        "Cosa comprende il biglietto \n \n" +
-                        "- L'Astrotalk in planetario (45 minuti)\n" +
-                        "- Uno spettacolo del planetario (30 minuti)\n" +
-                        "- La visita libera del museo interattivo (1h)\n" +
-                        "- L’audioguida fruibile da smartphone (portare auricolari)" +
-                        "\n \n Cosa non comprende il biglietto \n" +
-                        "- La visita guidata del museo interattivo"
+                longDescription = R.string.museo_astrotalk_long_description,
             ),
             EventItem(
                 id = "spazio_bambini",
                 imageResId = R.drawable.spazio_bambini,
-                title = "LO SPAZIO AI BAMBINI (solo il primo week end del mese)",
+                title = R.string.title_bambini,
                 calendarInfo = "Primo weekend del mese",
                 availableTimes = listOf("14:30", "16:00", "17:30"),
                 priceInfo = "Bambini: 5€, Adulti: gratis",
-                longDescription = "Il primo weekend di ogni mese, con tre turni di visita: arrivo alle ore 14.30*, 16.00* o 17.30\n" +
-                        "\n" +
-                        "*Al biglietto di ingresso delle 14.30 o delle 16.00 puoi aggiungere il funlab 6-11 anni (attività a pagamento per il bambino 6-11 anni, un adulto accompagna gratis)" +
-                        "\n \n Cosa comprende il biglietto\n" +
-                        "- La visita libera del museo interattivo (1h);\n" +
-                        "- L’audioguida fruibile da smartphone (portare auricolari);\n" +
-                        "- Uno spettacolo del planetario dedicato ai bambini (30 minuti)." +
-                        "\n \n Cosa non comprende il biglietto\n" +
-                        "- Il laboratorio funlab 6-11 anni (1h). Va aggiunto al biglietto di ingresso (bambino paga + adulto accompagna gratis);\n" +
-                        "- La visita guidata del museo interattivo.\n"
+                longDescription = R.string.spazio_bambini_long_description
             ),
             EventItem(
                 id = "cinema_sotto_stelle",
                 imageResId = R.drawable.cinema_sotto_stelle,
-                title = "CINEMA SOTTO LE STELLE apertura serale",
+                title = R.string.title_cinema,
                 calendarInfo = "Venerdì e Sabato sera",
                 availableTimes = listOf("19:15", "19:30"),
                 priceInfo = "Biglietto: 7€",
-                longDescription = "Goditi una serata magica con proiezioni di film a tema spaziale sotto il cielo stellato. Un'esperienza cinematografica unica che unisce il fascino del grande schermo alla bellezza dell'universo. Porta la tua coperta e preparati a viaggiare tra le stelle!"
+                longDescription = R.string.cinema_sotto_stelle_long_description
             )
         )
     }
