@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#000000">
+    android:background="@color/black2">
 
     <!-- Header -->
     <androidx.fragment.app.FragmentContainerView
@@ -27,7 +26,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <!-- Novità Section -->
             <TextView
@@ -35,148 +34,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/orbitron"
                 android:text="Novità"
                 android:textColor="#FFFFFF"
-                android:fontFamily="@font/orbitron"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- Moon Event Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_moon_event"
-                android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="8dp"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_novita">
+                app:layout_constraintTop_toBottomOf="@+id/tv_novita" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tv_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:background="#3949AB"
-                        android:padding="4dp"
-                        android:text="VENERDÌ 17 SETTEMBRE"
-                        android:textColor="#FFFFFF"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_time"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="ORE 21:00 - 22:00"
-                        android:textColor="#FFFFFF"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_date"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
-
-                    <TextView
-                        android:id="@+id/tv_moon_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="MOON"
-                        android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="@+id/tv_time"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
-
-                    <TextView
-                        android:id="@+id/tv_subtitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Live Original Soundtrack"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_moon_title"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_moon_title" />
-
-                    <TextView
-                        android:id="@+id/tv_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Ticket from € 15,00"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
-
-                    <Button
-                        android:id="@+id/btn_prenota"
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="8dp"
-
-                        android:paddingHorizontal="16dp"
-                        android:text="PRENOTA"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_price"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
-
-                    <ImageView
-                        android:id="@+id/iv_moon_cover"
-                        android:layout_width="120dp"
-                        android:layout_height="0dp"
-                        android:scaleType="centerCrop"
-
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <!-- Indicator dots -->
-            <View
-                android:id="@+id/dot1"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginTop="16dp"
-
-                app:layout_constraintEnd_toStartOf="@+id/dot2"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cv_moon_event" />
-
-            <View
-                android:id="@+id/dot2"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginStart="4dp"
-
-                app:layout_constraintEnd_toStartOf="@+id/dot3"
-                app:layout_constraintStart_toEndOf="@+id/dot1"
-                app:layout_constraintTop_toTopOf="@+id/dot1" />
-
-            <View
-                android:id="@+id/dot3"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginStart="4dp"
-
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:selectedDotColor="@color/yellow"
+                app:dotsColor="@color/white"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="12dp"
+                app:dotsSpacing="6dp"
+                app:dotsStrokeWidth="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/dot2"
-                app:layout_constraintTop_toTopOf="@+id/dot1" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager" />
 
             <!-- Prossime attività Section -->
             <TextView
@@ -184,16 +74,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:text="Prossime attività"
+                android:layout_marginTop="32dp"
                 android:fontFamily="@font/orbitron"
+                android:text="Prossime attività"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dot1" />
+                app:layout_constraintTop_toBottomOf="@+id/dotsIndicator" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -221,10 +112,10 @@
 
                         <ImageView
                             android:id="@+id/iv_telescope"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
                             android:layout_marginStart="16dp"
+                            android:src="@drawable/telescope"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -237,8 +128,8 @@
                             android:fontFamily="@font/orbitron"
                             android:text="Serata osservativa"
                             android:textAlignment="center"
-                            android:textColor="#00BCD4"
-                            android:textSize="20sp"
+                            android:textColor="@color/cyan"
+                            android:textSize="18sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toTopOf="@+id/tv_serata_subtitle"
                             app:layout_constraintEnd_toEndOf="@+id/tv_serata_subtitle"
@@ -268,7 +159,7 @@
                             android:text="27 Giugno"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             app:layout_constraintEnd_toEndOf="@+id/tv_serata_subtitle"
                             app:layout_constraintStart_toStartOf="@+id/tv_serata_subtitle"
                             app:layout_constraintTop_toBottomOf="@+id/tv_serata_subtitle" />
@@ -306,10 +197,10 @@
 
                         <ImageView
                             android:id="@+id/iv_music"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
                             android:layout_marginStart="16dp"
+                            android:src="@drawable/music_note"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -322,8 +213,8 @@
                             android:fontFamily="@font/orbitron"
                             android:text="Song for stars"
                             android:textAlignment="center"
-                            android:textColor="#00BCD4"
-                            android:textSize="20sp"
+                            android:textColor="@color/cyan"
+                            android:textSize="18sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toTopOf="@+id/tv_song_subtitle"
                             app:layout_constraintEnd_toEndOf="@+id/tv_song_subtitle"
@@ -338,7 +229,7 @@
                             android:text="Paolo della Piana"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/iv_arrow2"
                             app:layout_constraintStart_toEndOf="@+id/iv_music"
@@ -353,7 +244,7 @@
                             android:text="4 Luglio"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             app:layout_constraintEnd_toEndOf="@+id/tv_song_subtitle"
                             app:layout_constraintStart_toStartOf="@+id/tv_song_subtitle"
                             app:layout_constraintTop_toBottomOf="@+id/tv_song_subtitle" />
@@ -391,10 +282,10 @@
 
                         <ImageView
                             android:id="@+id/iv_rocket"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
                             android:layout_marginStart="16dp"
+                            android:src="@drawable/rocket"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -407,8 +298,8 @@
                             android:fontFamily="@font/orbitron"
                             android:text="Lo spazio ai Bambini"
                             android:textAlignment="center"
-                            android:textColor="#00BCD4"
-                            android:textSize="20sp"
+                            android:textColor="@color/cyan"
+                            android:textSize="18sp"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toTopOf="@+id/tv_bambini_subtitle"
                             app:layout_constraintEnd_toEndOf="@+id/tv_bambini_subtitle"
@@ -423,7 +314,7 @@
                             android:text="FunLab Come partano le immagini"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/iv_arrow3"
                             app:layout_constraintStart_toEndOf="@+id/iv_rocket"
@@ -438,7 +329,7 @@
                             android:text="5 e 6 Luglio"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="12sp"
+                            android:textSize="14sp"
                             app:layout_constraintEnd_toEndOf="@+id/tv_bambini_subtitle"
                             app:layout_constraintStart_toStartOf="@+id/tv_bambini_subtitle"
                             app:layout_constraintTop_toBottomOf="@+id/tv_bambini_subtitle" />

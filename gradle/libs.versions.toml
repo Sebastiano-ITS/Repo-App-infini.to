@@ -1,5 +1,7 @@
 [versions]
 agp = "8.5.0"
+androidxViewpager2 = "1.0.0"
+dotsindicator = "5.1.0"
 glide = "4.16.0"
 gson = "2.11.0"
 kotlin = "1.9.0"
@@ -16,11 +18,14 @@ materialCalendarviewVersion = "2.0.0"
 materialVersion = "1.12.0"
 recyclerview = "1.4.0"
 viewpager2 = "1.1.0"
+viewpager2Version = "1.1.0'"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+androidx-viewpager2-v100 = { module = "androidx.viewpager2:viewpager2", version.ref = "androidxViewpager2" }
+dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -33,6 +38,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarview" }
 material-v1120 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 prolificinteractive-material-calendarview = { module = "com.github.prolificinteractive:material-calendarview", version.ref = "materialCalendarviewVersion" }
+viewpager2 = { module = "implementation 'androidx.viewpager2:viewpager2", version.ref = "viewpager2Version" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

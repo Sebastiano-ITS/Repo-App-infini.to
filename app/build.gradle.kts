@@ -49,4 +49,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.material.v1120)
     implementation(libs.gson)
+    implementation(libs.dotsindicator)
 }

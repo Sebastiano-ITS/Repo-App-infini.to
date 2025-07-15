@@ -92,5 +92,7 @@
     <string name="news_card_image_description">Immagine Articolo</string>
     <string name="external_link_icon_description">Link Esterno</string>
     <string name="news_card_title_placeholder">Titolo della Notizia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
