@@ -15,6 +15,7 @@
     <string name="time_label">orario</string>
     <string name="no_time_selected">Nessun orario selezionato</string>
     <string name="price_label">tariffa</string>
+    <string name="no_price_selected">Nessuna tariffa selezionata</string>
     <string name="description_title">Descrizione</string>
     <string name="buy_button">Acquista</string>
     <string name="event_image_description">Immagine dettagli evento</string>
@@ -70,6 +71,40 @@
         Un\'esperienza cinematografica unica che unisce il fascino del grande schermo alla bellezza dell\'universo.\n
         Porta la tua coperta e preparati a viaggiare tra le stelle!
     </string>
+
+    <!-- Tipi di tariffa -->
+    <string name="tariff_tipo_intera">Intera</string>
+    <string name="tariff_tipo_ridotto">Ridotto</string>
+    <string name="tariff_tipo_gratuito">Gratuito</string>
+    <string name="tariff_tipo_gratuita">Gratuità</string>
+    <string name="tariff_tipo_mondo_parchi">Mondo Parchi</string>
+    <string name="tariff_tipo_vivi_parchi">Vivi Parchi</string>
+    <string name="tariff_tipo_adulto">Adulto</string>
+    <string name="tariff_tipo_bambino">Bambino</string>
+
+
+    <!-- Fasce d'età -->
+    <string name="tariff_fascia_19_30_anni">19-30 anni</string>
+    <string name="tariff_fascia_31_60_anni">31-60 anni</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Ragazzi 6-11 anni</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Ragazzi 12-18 anni</string>
+    <string name="tariff_fascia_over_60">Over 60</string>
+    <string name="tariff_fascia_tessere_enti_convenzionati">tessere/enti convenzionati</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Bambini 3-5 anni</string>
+    <string name="tariff_fascia_0_5_anni">0-5 anni</string>
+    <string name="tariff_fascia_standard">Standard</string>
+    <string name="tariff_fascia_studente">Studente</string>
+
+
+    <!-- Categorie -->
+    <string name="tariff_categoria_disabile">Disabile</string>
+    <string name="tariff_categoria_accompagnatore_disabile">Accompagnatore disabile</string>
+    <string name="tariff_categoria_passaporto_culturale">Passaporto culturale "Nati con la Cultura"</string>
+    <string name="tariff_categoria_residenti_pino_torinese">Residenti Pino Torinese</string>
+    <string name="tariff_categoria_dipendenti_osservatorio">dipendenti Osservatorio Astrofisico di Torino/ex IFSI</string>
+    <string name="tariff_categoria_club_docenti">Club Docenti di Infiniti.to</string>
+    <string name="tariff_categoria_abbonamento_musei">Abbonamento Musei</string>
+    <string name="tariff_categoria_torino_piemonte_card">Torino+Piemonte Card</string>
 
     <!-- Activity Login/SignUp -->
     <string name="email_label">Email</string>

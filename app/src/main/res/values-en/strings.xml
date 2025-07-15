@@ -15,6 +15,7 @@
     <string name="time_label">time</string>
     <string name="no_time_selected">No time selected</string>
     <string name="price_label">price</string>
+    <string name="no_price_selected">No price selected</string>
     <string name="description_title">Description</string>
     <string name="buy_button">Buy</string>
     <string name="event_image_description">Event details image</string>
@@ -68,6 +69,39 @@
         A unique cinematic experience that combines the charm of the big screen with the beauty of the universe.\n
         Bring your blanket and get ready to travel among the stars!
     </string>
+
+    <!-- Tariff types -->
+    <string name="tariff_tipo_intera">Full</string>
+    <string name="tariff_tipo_ridotto">Reduced</string>
+    <string name="tariff_tipo_gratuito">Free</string>
+    <string name="tariff_tipo_gratuita">Free Admission</string>
+    <string name="tariff_tipo_mondo_parchi">Parks World</string>
+    <string name="tariff_tipo_vivi_parchi">Live Parks</string>
+    <string name="tariff_tipo_adulto">Adult</string>
+    <string name="tariff_tipo_bambino">Child</string>
+
+    <!-- Age ranges -->
+    <string name="tariff_fascia_19_30_anni">19-30 years</string>
+    <string name="tariff_fascia_31_60_anni">31-60 years</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Kids 6-11 years</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Kids 12-18 years</string>
+    <string name="tariff_fascia_over_60">Over 60</string>
+    <string name="tariff_fascia_tessere_enti_convenzionati">Cards/affiliated entities</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Children 3-5 years</string>
+    <string name="tariff_fascia_0_5_anni">0-5 years</string>
+    <string name="tariff_fascia_standard">Standard</string>
+    <string name="tariff_fascia_studente">Student</string>
+
+    <!-- Categories -->
+    <string name="tariff_categoria_disabile">Disabled</string>
+    <string name="tariff_categoria_accompagnatore_disabile">Disabled companion</string>
+    <string name="tariff_categoria_passaporto_culturale">Cultural Passport "Born with Culture"</string>
+    <string name="tariff_categoria_residenti_pino_torinese">Pino Torinese Residents</string>
+    <string name="tariff_categoria_dipendenti_osservatorio">Turin Astrophysical Observatory/ex IFSI employees</string>
+    <string name="tariff_categoria_club_docenti">Infiniti.to Teachers Club</string>
+    <string name="tariff_categoria_abbonamento_musei">Museum Pass</string>
+    <string name="tariff_categoria_torino_piemonte_card">Torino+Piemonte Card</string>
+
 
     <!-- Activity Login/SignUp -->
     <string name="email_label">Email</string>
