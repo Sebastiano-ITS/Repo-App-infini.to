@@ -26,7 +26,7 @@ private const val ISLOGGEDIN = "isLoggedIn"
  * Use the [ConfirmDialogFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ConfirmDialogFragment : DialogFragment() {
+class ConfirmDialogFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var user: User
 

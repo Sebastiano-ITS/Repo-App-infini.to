@@ -1,144 +1,141 @@
 package com.example.infinito.ui.event_detail
 
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.DatePicker
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.infinito.R
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
+import android.widget.Toast
+import com.example.infinito.ui.event.CalendarBottomSheetFragment
+import com.example.infinito.ui.event.EventItem
+import com.example.infinito.ui.event.OnDateSelectedListener
+import com.example.infinito.ui.event.TimeBottomSheetFragment
+import com.example.infinito.ui.event.OnTimeSelectedListener
 import com.example.infinito.ui.fragment.HeaderFragment
-import com.example.infinito.utils.theme.setFixedTheme
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import java.util.Calendar
+import java.time.LocalDate // Richiede Android API Level 26+
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
-class EventDetailActivity : AppCompatActivity() {
 
-    private lateinit var calendarText: TextView
-    private lateinit var clockText: TextView
-    private lateinit var btnShop: Button
 
-    private var selectedDate: String = ""
-    private var selectedTime: String = ""
+class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeSelectedListener  { // Implementa l'interfaccia
+
+    // Tutte le dichiarazioni lateinit var
+    private lateinit var detailImageView: ImageView
+    private lateinit var detailTitleTextView: TextView
+    private lateinit var detailDescriptionTextView: TextView
+    private lateinit var buyButton: MaterialButton
+
+    private lateinit var calendarCardButton: MaterialCardView
+    private lateinit var timeCardButton: MaterialCardView
+    private lateinit var priceCardButton: MaterialCardView
+
+    private lateinit var selectedDateTextView: TextView
+    private lateinit var selectedTimeTextView: TextView
+
+
+    private var currentEvent: EventItem? = null // per tenere traccia dell'evento corrente
+
+    private var selectedEventDate: LocalDate? = null
+    private var selectedEventTime: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_event_detail)
-        setFixedTheme(this, window)
+
+        detailImageView = findViewById(R.id.detailImageView)
+        detailTitleTextView = findViewById(R.id.detailTitleTextView)
+        detailDescriptionTextView = findViewById(R.id.detailDescriptionTextView)
+        buyButton = findViewById(R.id.buyButton)
+
+        selectedDateTextView = findViewById(R.id.selectedDateTextView)
+        selectedTimeTextView = findViewById(R.id.selectedTimeTextView)
+
 
         supportFragmentManager
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
             .commit()
 
-        calendarText = findViewById(R.id.tv_calendar)
-        clockText = findViewById(R.id.tv_clock)
+        calendarCardButton = findViewById(R.id.calendarCardButton)
+        timeCardButton = findViewById(R.id.timeCardButton)
+        priceCardButton = findViewById(R.id.priceCardButton)
 
-        calendarText.setOnClickListener {
-            showCalendarDialog()
+        val event: EventItem? = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            intent.getSerializableExtra("event_item", EventItem::class.java)
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getSerializableExtra("event_item") as? EventItem
         }
 
-        clockText.setOnClickListener {
-            showTimeDialog()
+        event?.let {
+            currentEvent = it // Salva l'evento corrente
+            detailImageView.setImageResource(it.imageResId)
+            detailTitleTextView.text = it.title
+            detailDescriptionTextView.text = it.longDescription
         }
 
-        btnShop = findViewById(R.id.btn_acquista)
-
-        btnShop.setOnClickListener {
-            Log.d("datalosa", selectedDate)
-        }
-    }
-
-    private fun showCalendarDialog() {
-        val dialog = BottomSheetDialog(this)
-        val dialogView = layoutInflater.inflate(R.layout.calendar_dialog,null)
-
-        val datePicker = dialogView.findViewById<DatePicker>(R.id.calendar_view)
-        val btnConfirm = dialogView.findViewById<Button>(R.id.btn_confirm)
-
-        var tempDate = ""
-
-        if (selectedDate.isNotEmpty()) {
-            val splitDate = selectedDate.split("-")
-            val calendar = Calendar.getInstance()
-            calendar.set(splitDate[0].toInt(), splitDate[1].toInt(), splitDate[2].toInt())
-            datePicker.updateDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH))
+        // Settaggio dei listeners
+        calendarCardButton.setOnClickListener {
+            // Crea e mostra il Bottom Sheet del calendario
+            val calendarBottomSheet = CalendarBottomSheetFragment()
+            calendarBottomSheet.onDateSelectedListener = this
+            calendarBottomSheet.show(supportFragmentManager, calendarBottomSheet.tag)
         }
 
-        datePicker.setOnDateChangedListener { _, year, month, day ->
-            tempDate = "$year-$month-$day"
+        timeCardButton.setOnClickListener {
+            val timeBottomSheet = TimeBottomSheetFragment()
+            timeBottomSheet.onTimeSelectedListener = this
+            timeBottomSheet.show(supportFragmentManager, timeBottomSheet.tag)
         }
 
-        btnConfirm.setOnClickListener {
-            selectedDate = tempDate
-            dialog.dismiss()
-        }
-
-        dialog.setContentView(dialogView)
-        dialog.show()
-    }
-
-    private fun showTimeDialog() {
-        val dialog = BottomSheetDialog(this)
-        val dialogView = layoutInflater.inflate(R.layout.time_dialog,null)
-
-        val fourteenBtn = dialogView.findViewById<Button>(R.id.fourteenBtn)
-        val sixteenBtn = dialogView.findViewById<Button>(R.id.sixteenBtn)
-        val seventeenBtn = dialogView.findViewById<Button>(R.id.seventeenBtn)
-        val eighteenBtn = dialogView.findViewById<Button>(R.id.eighteenBtn)
-        val btnConfirm = dialogView.findViewById<Button>(R.id.btn_confirm)
-
-        var tempTime = ""
-
-        if (selectedTime.isNotEmpty()) {
-            when (selectedTime) {
-                "14:30" -> fourteenBtn.setBackgroundResource(R.drawable.selected_time)
-                "16:00" -> sixteenBtn.setBackgroundResource(R.drawable.selected_time)
-                "17:30" -> seventeenBtn.setBackgroundResource(R.drawable.selected_time)
-                "18:45" -> eighteenBtn.setBackgroundResource(R.drawable.selected_time)
+        timeCardButton.setOnClickListener {
+            currentEvent?.let { eventItem ->
+                // Passa gli orari specifici dell'evento al TimeBottomSheetFragment
+                val timeBottomSheet = TimeBottomSheetFragment.newInstance(eventItem.availableTimes)
+                timeBottomSheet.onTimeSelectedListener = this
+                timeBottomSheet.show(supportFragmentManager, timeBottomSheet.tag)
+            } ?: run {
+                Toast.makeText(this, "Errore: Dati evento non disponibili per gli orari.", Toast.LENGTH_SHORT).show()
             }
         }
 
-        fourteenBtn.setOnClickListener {
-            eighteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            seventeenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            sixteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            fourteenBtn.setBackgroundResource(R.drawable.selected_time)
-            tempTime = "14:30"
+        priceCardButton.setOnClickListener {
+            Toast.makeText(this, "Modale Tariffa: ${event?.priceInfo}", Toast.LENGTH_LONG).show()
         }
 
-        sixteenBtn.setOnClickListener {
-            eighteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            seventeenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            sixteenBtn.setBackgroundResource(R.drawable.selected_time)
-            fourteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            tempTime = "16:00"
-        }
 
-        seventeenBtn.setOnClickListener {
-            eighteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            seventeenBtn.setBackgroundResource(R.drawable.selected_time)
-            sixteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            fourteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            tempTime = "17:30"
+        buyButton.setOnClickListener {
+            if (selectedEventDate != null && selectedEventTime != null) {
+                val formattedDate = selectedEventDate?.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+                // Toast.makeText(this, "Data scelta: $formattedDate, Ora: $selectedEventTime", Toast.LENGTH_LONG).show()
+                // QUI puoi passare 'selectedEventDate' e 'selectedEventTime' ad altre schermate
+                // Esempio:
+                // val intent = Intent(this, NextActivity::class.java)
+                // intent.putExtra("selectedDate", selectedEventDate.toString()) // Converti a stringa per Intent
+                // intent.putExtra("selectedTime", selectedEventTime)
+                // startActivity(intent)
+            } else {
+                Toast.makeText(this, "Seleziona una data e un orario!", Toast.LENGTH_SHORT).show()
+            }
         }
+    }
 
-        eighteenBtn.setOnClickListener {
-            eighteenBtn.setBackgroundResource(R.drawable.selected_time)
-            seventeenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            sixteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            fourteenBtn.setBackgroundResource(R.drawable.not_selected_time)
-            tempTime = "18:45"
-        }
 
-        btnConfirm.setOnClickListener {
-            selectedTime = tempTime
-            dialog.dismiss()
-        }
+    override fun onDateSelected(selectedDate: LocalDate) {
+        this.selectedEventDate = selectedDate
+        // Formatta la data per visualizzarla
+        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ITALIAN)
+        selectedDateTextView.text = selectedDate.format(formatter) // Aggiorna il testo del TextView
+        // Toast.makeText(this, "Data selezionata : ${selectedDate.format(formatter)}", Toast.LENGTH_LONG).show()
+    }
 
-        dialog.setContentView(dialogView)
-        dialog.show()
+    override fun onTimeSelected(selectedTime: String) {
+        this.selectedEventTime = selectedTime
+        selectedTimeTextView.text = selectedTime
+        // Toast.makeText(this, "Orario selezionato : $selectedTime", Toast.LENGTH_SHORT).show()
     }
 }

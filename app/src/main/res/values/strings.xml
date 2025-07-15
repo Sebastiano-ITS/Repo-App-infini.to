@@ -1,33 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">InfiniTO</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
-    <!-- Strings for Login/SignUp -->
-    <string name="nameLabel">Nome</string>
-    <string name="surnameLabel">Cognome</string>
-    <string name="emailLabel">Email</string>
-    <string name="passwordLabel">Password</string>
-    <string name="confirmPasswordLabel">Conferma Password</string>
-    <string name="otherwiseLabel">Oppure</string>
-    <string name="googleButtonLabel">Accedi con Google</string>
-    <string name="notSignedLabel">Non hai ancora un account?\n<u>Registrati</u></string>
-    <string name="signedLabel">Hai già un account?\n<u>Accedi</u></string>
-    <string name="loginButtonLabel">Accedi</string>
-    <string name="signupButtonLabel">Registrati</string>
+    <!-- Activity Event -->
+    <string name="general">Generale</string>
+    <string name="news">News</string>
+    <string name="general_icon">Icona Generale</string>
+    <string name="news_icon">Icona News</string>
 
-    <!-- Strings for Eventi -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Generale">Generale</string>
-    <string name="News">News</string>
-    <string name="ScopriDipiu">Scopri di più</string>
-    <string name="Title_card">PLANETARIO + TELESCOPIO (nuova serata osservativa)</string>
-    <string name="Title_news">Italia nello spazio</string>
-    <string name="Articoli_ed_approfondimenti">Articoli ed approfondimenti</string>
-    <string name="Carica_più_articoli">Carica più articoli</string>
-    
-    <!-- Errori nel form -->
-    <string name="requiredInputFieldError">questo campo è obbligatorio</string>
-    <string name="IncorrectEmailError">L\'email inserita non è valida</string>
-    <string name="IncorrectPasswordError">La password deve contenere almeno 8 caratteri, 1 maiuscola, 1 carattere speciale e 2 numeri</string>
-    <string name="IncorrectPasswordMatchError">Le password non corrispondono</string>
+    <!-- Activity Event Detail -->
+    <string name="planetarium_telescope">PLANETARIO + TELESCOPIO</string>
+    <string name="calendar_label">calendario</string>
+    <string name="no_date_selected">Nessuna data selezionata</string>
+    <string name="time_label">orario</string>
+    <string name="no_time_selected">Nessun orario selezionato</string>
+    <string name="price_label">tariffa</string>
+    <string name="description_title">Descrizione</string>
+    <string name="buy_button">Acquista</string>
+    <string name="event_image_description">Immagine dettagli evento</string>
+
+    <!-- Activity Login/SignUp -->
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+
+    <!-- Activity Login -->
+    <string name="login_header">Accesso</string>
+    <string name="login_button_label">Accedi</string>
+    <string name="not_signed_up_label">Non hai un account? <u>Registrati</u></string>
+
+    <!-- Activity SignUp -->
+    <string name="registration_header">Registrazione</string>
+    <string name="name_label">Nome</string>
+    <string name="surname_label">Cognome</string>
+    <string name="confirm_password_label">Conferma Password</string>
+    <string name="signup_button_label">Registrati</string>
+    <string name="signed_up_label">Hai già un account? <u>Accedi</u></string>
+
+    <!-- Signup Errors -->
+    <string name="required_input_field_error">questo campo è obbligatorio</string>
+    <string name="incorrect_email_error">L\'email inserita non è valida</string>
+    <string name="incorrect_password_error">La password deve contenere almeno 8 caratteri, 1 maiuscola, 1 carattere speciale e 2 numeri</string>
+    <string name="incorrect_password_match_error">Le password non corrispondono</string>
+
+    <!-- Activity Profile -->
+    <string name="profile_icon_description">Profile Icon</string>
+    <string name="tickets_purchased">Biglietti Acquistati</string>
+    <string name="bookmark_icon_description">Bookmark Icon</string>
+    <string name="language_label">Lingua</string>
+    <string name="language_nationality">Italiano</string>
+    <string name="globe_icon_description">Globe Icon</string>
+    <string name="flag_icon_description">Italian Flag Icon</string>
+    <string name="arrow_forward_icon_description">Arrow Forward Icon</string>
+    <string name="logout_button">Esci dall\'account</string>
+    <string name="delete_account_button">Rimuovi Account</string>
+
+    <!-- Activity Start -->
+    <string name="app_title">INFINI.TO</string>
+    <string name="subtitle_text">Il museo interattivo</string>
+    <string name="start_button">INIZIA</string>
+
+    <!-- Fragment Bottom Bar -->
+    <string name="home_text">Home</string>
+    <string name="events_text">Eventi</string>
+    <string name="tickets_text">Biglietti</string>
+    <string name="home_icon_description">Home Icon</string>
+    <string name="events_icon_description">Events Icon</string>
+    <string name="tickets_icon_description">Tickets Icon</string>
+
+    <!-- Fragment Confirm Dialog -->
+    <string name="confirmation_message">Sei sicuro di\nvoler continuare ?</string>
+    <string name="yes_button">Sì</string>
+    <string name="no_button">No</string>
+
+    <!-- Fragment News -->
+    <string name="articles_and_insights_title">Articoli ed approfondimenti</string>
+    <string name="load_more_articles_button">Carica più articoli</string>
+
+    <!-- Item Card -->
+    <string name="card_image_description">Immagine della Card</string>
+    <string name="card_title_placeholder">Titolo della Card</string>
+    <string name="learn_more_button">Scopri Di Più</string>
+
+    <!-- Calendar/Time Bottom Sheet -->
+    <string name="confirm_button">Conferma</string>
+
+    <!-- Calendar Bottom Sheet -->
+    <string name="select_date_title">Seleziona Data</string>
+
+    <!-- News Card -->
+    <string name="news_card_image_description">Immagine Articolo</string>
+    <string name="external_link_icon_description">Link Esterno</string>
+    <string name="news_card_title_placeholder">Titolo della Notizia</string>
+
 </resources>

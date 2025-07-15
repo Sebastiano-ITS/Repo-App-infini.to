@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InfiniTO</string>
+
+    <!-- Activity Event -->
+    <string name="general">General</string>
+    <string name="news">News</string>
+    <string name="general_icon">General Icon</string>
+    <string name="news_icon">News Icon</string>
+
+    <!-- Activity Event Detail -->
+    <string name="planetarium_telescope">PLANETARIUM + TELESCOPE</string>
+    <string name="calendar_label">calendar</string>
+    <string name="no_date_selected">No date selected</string>
+    <string name="time_label">time</string>
+    <string name="no_time_selected">No time selected</string>
+    <string name="price_label">price</string>
+    <string name="description_title">Description</string>
+    <string name="buy_button">Buy</string>
+    <string name="event_image_description">Event details image</string>
+
+    <!-- Activity Login/SignUp -->
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+
+    <!-- Activity Login -->
+    <string name="login_header">Login</string>
+    <string name="login_button_label">Log In</string>
+    <string name="not_signed_up_label">Don\'t have an account? <u>Sign Up</u></string>
+
+    <!-- Activity SignUp -->
+    <string name="registration_header">Registration</string>
+    <string name="name_label">Name</string>
+    <string name="surname_label">Surname</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="signup_button_label">Sign Up</string>
+    <string name="signed_up_label">Already have an account? <u>Log In</u></string>
+
+    <!-- Signup Errors -->
+    <string name="required_input_field_error">this field is required</string>
+    <string name="incorrect_email_error">The email entered is not valid</string>
+    <string name="incorrect_password_error">Password must contain at least 8 characters, 1 uppercase, 1 special character and 2 numbers</string>
+    <string name="incorrect_password_match_error">Passwords do not match</string>
+
+    <!-- Activity Profile -->
+    <string name="profile_icon_description">Profile Icon</string>
+    <string name="tickets_purchased">Tickets Purchased</string>
+    <string name="bookmark_icon_description">Bookmark Icon</string>
+    <string name="language_label">Language</string>
+    <string name="language_nationality">English</string>
+    <string name="globe_icon_description">Globe Icon</string>
+    <string name="flag_icon_description">Italian Flag Icon</string>
+    <string name="arrow_forward_icon_description">Arrow Forward Icon</string>
+    <string name="logout_button">Log out of account</string>
+    <string name="delete_account_button">Delete Account</string>
+
+    <!-- Activity Start -->
+    <string name="app_title">INFINI.TO</string>
+    <string name="subtitle_text">The interactive museum</string>
+    <string name="start_button">START</string>
+
+    <!-- Fragment Bottom Bar -->
+    <string name="home_text">Home</string>
+    <string name="events_text">Events</string>
+    <string name="tickets_text">Tickets</string>
+    <string name="home_icon_description">Home Icon</string>
+    <string name="events_icon_description">Events Icon</string>
+    <string name="tickets_icon_description">Tickets Icon</string>
+
+    <!-- Fragment Confirm Dialog -->
+    <string name="confirmation_message">Are you sure you\nwant to continue?</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+
+    <!-- Fragment News -->
+    <string name="articles_and_insights_title">Articles and insights</string>
+    <string name="load_more_articles_button">Load more articles</string>
+
+    <!-- Item Card -->
+    <string name="card_image_description">Card Image</string>
+    <string name="card_title_placeholder">Card Title</string>
+    <string name="learn_more_button">Learn More</string>
+
+    <!-- Calendar/Time Bottom Sheet -->
+    <string name="confirm_button">Confirm</string>
+
+    <!-- Calendar Bottom Sheet -->
+    <string name="select_date_title">Select Date</string>
+
+    <!-- News Card -->
+    <string name="news_card_image_description">Article Image</string>
+    <string name="external_link_icon_description">External Link</string>
+    <string name="news_card_title_placeholder">News Title</string>
+
+</resources>

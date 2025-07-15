@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
+import androidx.core.net.toUri
 
 class NewsAdapter(private val newsList: List<NewsItem>) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
@@ -31,7 +32,7 @@ class NewsAdapter(private val newsList: List<NewsItem>) :
 
         holder.itemView.setOnClickListener {
             // Quando la card viene cliccata, apri l'URL esterno
-            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(currentItem.url))
+            val browserIntent = Intent(Intent.ACTION_VIEW, currentItem.url.toUri())
             holder.itemView.context.startActivity(browserIntent)
         }
     }

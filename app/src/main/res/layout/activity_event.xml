@@ -52,15 +52,16 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@drawable/ic_generale"
-                    android:contentDescription="Icona Generale"
+                    android:contentDescription="@string/general_icon"
                     app:tint="#FFD700" />
 
                 <TextView
                     android:id="@+id/textGenerale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Generale"
+                    android:text="@string/general"
                     android:textColor="#FFFFFF"
+                    android:fontFamily="@font/orbitron"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -91,15 +92,16 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:src="@drawable/ic_news"
-                    android:contentDescription="Icona News"
+                    android:contentDescription="@string/news_icon"
                     app:tint="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/textNews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/News"
+                    android:text="@string/news"
                     android:textColor="#FFFFFF"
+                    android:fontFamily="@font/orbitron"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp" />
             </LinearLayout>

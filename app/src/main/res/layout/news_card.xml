@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:contentDescription="Immagine Articolo"
+            android:contentDescription="@string/news_card_image_description"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:src="@drawable/icon_external_link"
-            android:contentDescription="Link Esterno"
+            android:contentDescription="@string/external_link_icon_description"
             app:tint="@color/cyan"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -52,6 +52,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:text="@string/Title_news" />
+            tools:text="@string/news_card_title_placeholder" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </com.google.android.material.card.MaterialCardView>

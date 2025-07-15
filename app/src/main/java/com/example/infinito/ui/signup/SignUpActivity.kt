@@ -13,8 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.widget.addTextChangedListener
 import com.example.infinito.R
+import com.example.infinito.data.model.User
 import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.ui.login.LoginActivity
+import com.example.infinito.utils.UserUtils
 import com.example.infinito.utils.md5.toMD5
 import com.example.infinito.utils.theme.setFixedTheme
 import com.google.android.material.textfield.TextInputEditText
@@ -49,6 +51,7 @@ class SignUpActivity : AppCompatActivity() {
         setFixedTheme(this, window)
 
         loginTextBtn = findViewById(R.id.loginTextBtn)
+
         nameInput = findViewById(R.id.nameInput)
         surnameInput = findViewById(R.id.surnameInput)
         emailInput = findViewById(R.id.emailInput)
@@ -117,23 +120,27 @@ class SignUpActivity : AppCompatActivity() {
 
         registerBtn.setOnClickListener {
             if (name.isNotEmpty() && surname.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
-                sharedPref.edit {
-                    putString("name", name)
-                    putString("surname", surname)
-                    putString("email", email)
-                    putString("password", password.toMD5())
-                    apply()
-                }
+                val user = User(name, surname, email, password.toMD5(), true)
+                val users = UserUtils.getUsers(this)
+                UserUtils.saveUsers(this, users + user)
                 Toast.makeText(this, "Registrazione Completata!", Toast.LENGTH_LONG).show()
                 val homeIntent = Intent(this, HomeActivity::class.java)
                 startActivity(homeIntent)
                 finish()
+            } else {
+                nameError.visibility = View.VISIBLE
+                surnameError.visibility = View.VISIBLE
+                emailError.visibility = View.VISIBLE
+                passwordError.visibility = View.VISIBLE
+                confirmPasswordError.visibility = View.VISIBLE
+                Toast.makeText(this, "Devi compilare tutti i campi correttamente!", Toast.LENGTH_LONG).show()
             }
         }
 
         loginTextBtn.setOnClickListener {
             val loginIntent = Intent(this, LoginActivity::class.java)
             startActivity(loginIntent)
+            finish()
         }
     }
 }

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
 import com.example.infinito.ui.event.EventItem
 import com.example.infinito.ui.event.EventAdapter
-import com.example.infinito.ui.event.EventDetailActivity
+import com.example.infinito.ui.event_detail.EventDetailActivity
 import com.example.infinito.ui.event.OnEventClickListener
 
 
