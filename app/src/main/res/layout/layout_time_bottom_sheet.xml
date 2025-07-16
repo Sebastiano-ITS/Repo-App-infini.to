@@ -10,7 +10,9 @@
         android:background="@drawable/bottom_sheet_background"
         android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <GridLayout
             android:id="@+id/timeGrid"
@@ -29,11 +31,16 @@
             android:id="@+id/confirmTimeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/orbitron"
+            android:padding="12dp"
             android:text="@string/confirm_button"
+            android:textStyle="bold"
             android:textColor="@color/black"
+            android:textSize="22sp"
             app:backgroundTint="@color/white"
-            app:cornerRadius="8dp" />
+            app:cornerRadius="24dp" />
 
     </LinearLayout>
 

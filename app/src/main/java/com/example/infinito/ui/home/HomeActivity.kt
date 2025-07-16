@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.infinito.R
 import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.fragment.BottomBarFragment
+import com.example.infinito.ui.fragment.ContactFragment
 import com.example.infinito.ui.fragment.HeaderFragment
 import com.example.infinito.utils.theme.setFixedTheme
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
@@ -26,6 +27,14 @@ class HomeActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
             .add(R.id.bottomBar, BottomBarFragment.newInstance(ActivityNames.HOME))
+            .add(R.id.contactMenu, ContactFragment())
+            .commit()
+
+        supportFragmentManager.executePendingTransactions()
+
+        supportFragmentManager
+            .beginTransaction()
+            .hide(supportFragmentManager.findFragmentById(R.id.contactMenu)!!)
             .commit()
 
         viewPagerAdapter = ViewPagerAdapter(this)

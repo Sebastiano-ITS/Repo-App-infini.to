@@ -179,9 +179,9 @@
 
             <!-- Flag Icon -->
             <ImageView
+                android:id="@+id/flagIcon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_flag_it"
                 android:contentDescription="@string/flag_icon_description"
                 android:layout_marginEnd="16dp" />
 
