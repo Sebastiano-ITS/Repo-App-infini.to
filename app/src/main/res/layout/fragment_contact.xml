@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="360dp"
+    android:layout_gravity="center"
+    android:background="@drawable/edittext_border_white"
+    android:padding="24dp">
+
+    <!-- Pulsante X per chiudere -->
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_close"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/button_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Pulsante Orario e Contatti -->
+    <Button
+        android:id="@+id/btn_schedule_contact"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_rounded_white"
+        android:text="@string/schedule_and_contact"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/orbitron"
+        app:layout_constraintTop_toBottomOf="@id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <!-- Pulsante Informativa Privacy -->
+    <Button
+        android:id="@+id/btn_privacy"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/button_rounded_white"
+        android:text="@string/privacy_policy"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/orbitron"
+        android:drawableLeft="@drawable/ic_shield"
+        android:drawablePadding="12dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_schedule_contact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <!-- Container per i social media icons -->
+    <LinearLayout
+        android:id="@+id/social_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_privacy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- YouTube -->
+        <ImageButton
+            android:id="@+id/btn_youtube"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_youtube"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/youtube_description" />
+
+        <!-- Facebook -->
+        <ImageButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_facebook"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/facebook_description" />
+
+        <!-- Twitter -->
+        <ImageButton
+            android:id="@+id/btn_twitter_x"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_twitter_x"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/twitter_x_description" />
+
+        <!-- Instagram -->
+        <ImageButton
+            android:id="@+id/btn_instagram"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_instagram"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/instagram_description" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

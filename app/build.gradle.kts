@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.infinito"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.infinito"
         minSdk = 29
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    implementation (libs.androidx.recyclerview)
+    implementation (libs.material.v1120) 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -45,4 +47,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.material.v1120)
+    implementation(libs.gson)
+    implementation(libs.dotsindicator)
 }
