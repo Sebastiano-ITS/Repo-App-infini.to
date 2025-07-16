@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">InfiniTO</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Strings for Login/SignUp -->
+    <string name="nameLabel">Nome</string>
+    <string name="surnameLabel">Cognome</string>
+    <string name="emailLabel">Email</string>
+    <string name="passwordLabel">Password</string>
+    <string name="confirmPasswordLabel">Conferma Password</string>
+    <string name="otherwiseLabel">Oppure</string>
+    <string name="googleButtonLabel">Accedi con Google</string>
+    <string name="notSignedLabel">Non hai ancora un account?\nRegistrati</string>
+    <string name="loginButtonLabel">Accedi</string>
+
+    <!-- Strings for Eventi -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Generale">Generale</string>
+    <string name="News">News</string>
+    <string name="ScopriDipiu">Scopri di più</string>
+    <string name="Title_card">PLANETARIO + TELESCOPIO (nuova serata osservativa)</string>
 </resources>
