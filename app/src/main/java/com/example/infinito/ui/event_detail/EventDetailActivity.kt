@@ -15,6 +15,7 @@ import com.example.infinito.ui.event.OnTariffSelectedListener
 import com.example.infinito.ui.event.OnTimeSelectedListener
 import com.example.infinito.ui.event.TariffBottomSheetFragment
 import com.example.infinito.ui.event.TimeBottomSheetFragment
+import com.example.infinito.ui.fragment.ContactFragment
 import com.example.infinito.ui.fragment.HeaderFragment
 import com.example.infinito.utils.theme.setFixedTheme
 import com.google.android.material.button.MaterialButton
@@ -64,10 +65,17 @@ class EventDetailActivity : AppCompatActivity(), OnDateSelectedListener, OnTimeS
         selectedTimeTextView = findViewById(R.id.selectedTimeTextView)
         selectedTariffTextView = findViewById(R.id.selectedTariffTextView)
 
-
         supportFragmentManager
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
+            .add(R.id.contactMenu, ContactFragment())
+            .commit()
+
+        supportFragmentManager.executePendingTransactions()
+
+        supportFragmentManager
+            .beginTransaction()
+            .hide(supportFragmentManager.findFragmentById(R.id.contactMenu)!!)
             .commit()
 
         calendarCardButton = findViewById(R.id.calendarCardButton)

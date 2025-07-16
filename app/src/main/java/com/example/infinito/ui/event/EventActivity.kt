@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.infinito.R
 import com.example.infinito.data.model.ActivityNames
 import com.example.infinito.ui.fragment.BottomBarFragment
+import com.example.infinito.ui.fragment.ContactFragment
 import com.example.infinito.ui.fragment.GeneralFragment
 import com.example.infinito.ui.fragment.HeaderFragment
 import com.example.infinito.ui.fragment.NewsFragment
@@ -44,6 +45,14 @@ class EventActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.header, HeaderFragment())
             .add(R.id.bottomBar, BottomBarFragment.newInstance(ActivityNames.EVENT))
+            .add(R.id.contactMenu, ContactFragment())
+            .commit()
+
+        supportFragmentManager.executePendingTransactions()
+
+        supportFragmentManager
+            .beginTransaction()
+            .hide(supportFragmentManager.findFragmentById(R.id.contactMenu)!!)
             .commit()
 
         val cardGenerale: MaterialCardView = findViewById(R.id.cardGenerale)
