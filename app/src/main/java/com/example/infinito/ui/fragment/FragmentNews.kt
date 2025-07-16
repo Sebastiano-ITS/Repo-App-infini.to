@@ -63,16 +63,16 @@ class NewsFragment : Fragment() {
 
     private fun generateDummyNewsData(): List<NewsItem> {
         return listOf(
-            NewsItem(R.drawable.italia_spazio, "Italia nello spazio", "https://www.planetarioditorino.it/italia-nello-spazio"),
-            NewsItem(R.drawable.bentornato_autunno, "Bentornato Autunno", "https://www.planetarioditorino.it/bentornato-autunno"),
-            NewsItem(R.drawable.benvenuta_estate, "Benvenuta Estate!", ""),
-            NewsItem(R.drawable.primavera, "Quando inizia La Primavera", ""),
-            NewsItem(R.drawable.solstizio_inverno, "Solstizio D'Inverno", ""),
-            NewsItem(R.drawable.iss_compleanno, "Buon Compleanno, ISS!", ""),
-            NewsItem(R.drawable.missione_galileo, "La Missione Galileo", ""),
-            NewsItem(R.drawable.cassini_huygens, "La Missione Cassini-Huygens", ""),
-            NewsItem(R.drawable.sonde_voyager, "Le Sonde Voyager", ""),
-            NewsItem(R.drawable.rover_curiosity, "Il Rover Curiosity", "")
+            NewsItem(R.drawable.italia_spazio, R.string.news_title_italy_space, R.string.news_url_italy_space),
+            NewsItem(R.drawable.bentornato_autunno, R.string.news_title_welcome_autumn, R.string.news_url_welcome_autumn),
+            NewsItem(R.drawable.benvenuta_estate, R.string.news_title_welcome_summer, R.string.news_url_welcome_summer),
+            NewsItem(R.drawable.primavera, R.string.news_title_spring, R.string.news_url_spring),
+            NewsItem(R.drawable.solstizio_inverno, R.string.news_title_winter_solstice, R.string.news_url_winter_solstice),
+            NewsItem(R.drawable.iss_compleanno, R.string.news_title_iss_birthday, R.string.news_url_iss_birthday),
+            NewsItem(R.drawable.missione_galileo, R.string.news_title_mission_galileo, R.string.news_url_mission_galileo),
+            NewsItem(R.drawable.cassini_huygens, R.string.news_title_cassini_huygens, R.string.news_url_cassini_huygens),
+            NewsItem(R.drawable.sonde_voyager, R.string.news_title_sonde_voyager, R.string.news_url_sonde_voyager),
+            NewsItem(R.drawable.rover_curiosity, R.string.news_title_rover_curiosity, R.string.news_url_rover_curiosity)
         )
     }
 }

@@ -81,14 +81,14 @@
     <string name="tariff_tipo_bambino">Child</string>
 
     <!-- Age ranges -->
-    <string name="tariff_fascia_19_30_anni">19-30 years</string>
-    <string name="tariff_fascia_31_60_anni">31-60 years</string>
-    <string name="tariff_fascia_ragazzi_6_11_anni">Kids 6-11 years</string>
-    <string name="tariff_fascia_ragazzi_12_18_anni">Kids 12-18 years</string>
+    <string name="tariff_fascia_19_30_anni">19–30 years</string>
+    <string name="tariff_fascia_31_60_anni">31–60 years</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Kids 6–11 years</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Kids 12–18 years</string>
     <string name="tariff_fascia_over_60">Over 60</string>
     <string name="tariff_fascia_tessere_enti_convenzionati">Cards/affiliated entities</string>
-    <string name="tariff_fascia_bambini_3_5_anni">Children 3-5 years</string>
-    <string name="tariff_fascia_0_5_anni">0-5 years</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Children 3–5 years</string>
+    <string name="tariff_fascia_0_5_anni">0–5 years</string>
     <string name="tariff_fascia_standard">Standard</string>
     <string name="tariff_fascia_studente">Student</string>
 
@@ -169,11 +169,70 @@
     <string name="confirm_button">Confirm</string>
 
     <!-- Calendar Bottom Sheet -->
-    <string name="select_date_title">Select Date</string>
+    <string name="select_date_title">Select a Date</string>
+
+    <!-- Price Bottom Sheet -->
+    <string name="select_price_title">Select a Price</string>
 
     <!-- News Card -->
     <string name="news_card_image_description">Article Image</string>
     <string name="external_link_icon_description">External Link</string>
     <string name="news_card_title_placeholder">News Title</string>
+
+    <!-- Activity Home -->
+    <string name="section_news">News</string>
+    <string name="section_upcoming_activities">Upcoming activities</string>
+
+    <string name="observational_evening_title">Observational evening</string>
+    <string name="observational_evening_subtitle">Planetarium + Telescope</string>
+    <string name="observational_evening_date">June 27</string>
+    <string name="telescope_icon_description">Telescope icon</string>
+
+    <string name="song_for_stars_title">Song for stars</string>
+    <string name="song_for_stars_subtitle">Paolo della Piana</string>
+    <string name="song_for_stars_date">July 4</string>
+    <string name="music_note_icon_description">Music note icon</string>
+
+    <string name="space_for_children_title">Space for Children</string>
+    <string name="space_for_children_subtitle">FunLab How images start</string>
+    <string name="space_for_children_date">July 5 and 6</string>
+    <string name="rocket_icon_description">Rocket icon</string>
+
+    <!-- Fragment News -->
+    <string name="news_title_italy_space">Italy in Space</string>
+    <string name="news_url_italy_space">https://www.planetarioditorino.it/italia-nello-spazio</string>
+    <string name="news_title_welcome_autumn">Welcome Back Autumn</string>
+    <string name="news_url_welcome_autumn">https://www.planetarioditorino.it/bentornato-autunno</string>
+    <string name="news_title_welcome_summer">Welcome Summer!</string>
+    <string name="news_url_welcome_summer">https://www.planetarioditorino.it/benvenuta-estate</string>
+    <string name="news_title_spring">When Spring Begins</string>
+    <string name="news_url_spring">https://www.planetarioditorino.it/quando-inizia-la-primavera</string>
+    <string name="news_title_winter_solstice">Winter Solstice</string>
+    <string name="news_url_winter_solstice">https://www.planetarioditorino.it/solstizio-dinverno</string>
+    <string name="news_title_iss_birthday">Happy Birthday, ISS!</string>
+    <string name="news_url_iss_birthday">https://www.planetarioditorino.it/buon-compleanno-iss</string>
+    <string name="news_title_mission_galileo">The Galileo Mission</string>
+    <string name="news_url_mission_galileo">https://www.planetarioditorino.it/la-missione-galileo</string>
+    <string name="news_title_cassini_huygens">The Cassini-Huygens Mission</string>
+    <string name="news_url_cassini_huygens">https://www.planetarioditorino.it/la-bellezza-di-saturno</string>
+    <string name="news_title_sonde_voyager">The Voyager Probes</string>
+    <string name="news_url_sonde_voyager">https://www.planetarioditorino.it/le-sonde-voyager</string>
+    <string name="news_title_rover_curiosity">The Curiosity Rover</string>
+    <string name="news_url_rover_curiosity">https://www.planetarioditorino.it/il-rover-curiosity</string>
+
+    <!-- Fragment Contact -->
+    <string name="button_close">Close</string>
+    <string name="schedule_and_contact">Schedule and Contact</string>
+    <string name="schedule_and_contact_url">https://www.planetarioditorino.it/home/contatti</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy_url">https://www.planetarioditorino.it/home/privacy</string>
+    <string name="youtube_description">Youtube</string>
+    <string name="youtube_url">https://www.youtube.com/@PlanetarioDiTorino</string>
+    <string name="facebook_description">Facebook</string>
+    <string name="facebook_url">https://www.facebook.com/planetarioditorino</string>
+    <string name="twitter_x_description">Twitter X</string>
+    <string name="twitter_x_url">https://x.com/infini_to</string>
+    <string name="instagram_description">Instagram</string>
+    <string name="instagram_url">https://www.instagram.com/planetariotorino</string>
 
 </resources>

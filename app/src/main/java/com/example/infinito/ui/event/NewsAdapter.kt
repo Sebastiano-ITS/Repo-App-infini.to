@@ -28,11 +28,11 @@ class NewsAdapter(private val newsList: List<NewsItem>) :
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val currentItem = newsList[position]
         holder.imageView.setImageResource(currentItem.imageResId)
-        holder.titleTextView.text = currentItem.title
+        holder.titleTextView.setText(currentItem.title)
 
         holder.itemView.setOnClickListener {
             // Quando la card viene cliccata, apri l'URL esterno
-            val browserIntent = Intent(Intent.ACTION_VIEW, currentItem.url.toUri())
+            val browserIntent = Intent(Intent.ACTION_VIEW, holder.itemView.context.getText(currentItem.url).toString().toUri())
             holder.itemView.context.startActivity(browserIntent)
         }
     }

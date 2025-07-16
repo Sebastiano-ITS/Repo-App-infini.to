@@ -2,11 +2,11 @@ package com.example.infinito.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.fragment.app.Fragment
 import com.example.infinito.R
 import com.example.infinito.ui.profile.ProfileActivity
 
@@ -48,6 +48,20 @@ class HeaderFragment : Fragment() {
         profileIcon.setOnClickListener {
             val profileIntent = Intent(view.context, ProfileActivity::class.java)
             startActivity(profileIntent)
+        }
+
+        val hamburgerIcon = view.findViewById<ImageView>(R.id.hamburgerIcon)
+        hamburgerIcon.setOnClickListener {
+            val fragment = parentFragmentManager.findFragmentById(R.id.contactMenu)
+            fragment?.let {
+                val transaction = parentFragmentManager.beginTransaction()
+                if (fragment.isVisible) {
+                    transaction.hide(fragment)
+                } else {
+                    transaction.show(fragment)
+                }
+                transaction.commit()
+            }
         }
     }
 
