@@ -1,9 +1,15 @@
 [versions]
 agp = "8.5.0"
+androidDatepicker = "1.0.4"
 androidxViewpager2 = "1.0.0"
+applandeoMaterialCalendarView = "1.9.2"
+calendarView = "2.4.0"
+converterGson = "2.9.0"
 dotsindicator = "5.1.0"
 glide = "4.16.0"
+googleGson = "2.10.1"
 gson = "2.11.0"
+gsonVersion = "2.13.1"
 kotlin = "1.9.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
@@ -16,28 +22,44 @@ constraintlayout = "2.1.4"
 materialCalendarview = "2.0.1"
 materialCalendarviewVersion = "2.0.0"
 materialVersion = "1.12.0"
+prolificinteractiveMaterialCalendarview = "1.4.3"
 recyclerview = "1.4.0"
+retrofit = "3.0.0"
+retrofitVersion = "2.9.0"
+view = "<latest-version>"
 viewpager2 = "1.1.0"
 viewpager2Version = "1.1.0'"
 
 [libraries]
+android-datepicker = { module = "com.github.isdayoff:android-datepicker", version.ref = "androidDatepicker" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 androidx-viewpager2-v100 = { module = "androidx.viewpager2:viewpager2", version.ref = "androidxViewpager2" }
+calendar-view = { module = "com.kizitonwose.calendar:calendar-view", version.ref = "calendarView" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }
+github-material-calendarview = { module = "com.github.prolificinteractive:material-calendarview" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+gson-v2101 = { module = "com.google.code.gson:gson", version.ref = "googleGson" }
+gson-v2131 = { module = "com.google.code.gson:gson", version.ref = "gsonVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kizitonwose-calendar-view = { module = "com.kizitonwose.calendar:calendar-view" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material-calendar-view = { module = "com.applandeo:material-calendar-view", version.ref = "applandeoMaterialCalendarView" }
 material-calendarview = { module = "com.prolificinteractive:material-calendarview", version.ref = "materialCalendarview" }
+material-calendarview-v143 = { module = "com.prolificinteractive:material-calendarview", version.ref = "prolificinteractiveMaterialCalendarview" }
 material-v1120 = { module = "com.google.android.material:material", version.ref = "materialVersion" }
 prolificinteractive-material-calendarview = { module = "com.github.prolificinteractive:material-calendarview", version.ref = "materialCalendarviewVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-v290 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+view = { module = "com.kizitonwose.calendar:view", version.ref = "view" }
 viewpager2 = { module = "implementation 'androidx.viewpager2:viewpager2", version.ref = "viewpager2Version" }
 
 [plugins]

@@ -1,4 +1,4 @@
-package com.example.infinito.ui.ticketBought
+package com.example.infinito.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
-import com.example.infinito.data.model.TicketDetailModel
+import com.example.infinito.data.model.ticket.TicketModel
 
-class TicketBoughtAdapter(private val ticketsBought: ArrayList<TicketDetailModel>) : RecyclerView.Adapter<TicketBoughtAdapter.ViewHolder>() {
+class TicketAdapter(private val ticketsBought: List<TicketModel>) : RecyclerView.Adapter<TicketAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,7 +27,7 @@ class TicketBoughtAdapter(private val ticketsBought: ArrayList<TicketDetailModel
         val ticketLocation = holder.itemView.findViewById<TextView>(R.id.typeTicketText)
         ticketLocation.text = ticket.ticketType
         val ticketPrice = holder.itemView.findViewById<TextView>(R.id.priceTicketText)
-        ticketPrice.text = ticket.ticketPrice.toString()
+        ticketPrice.text = "%.2f".format(ticket.ticketPrice)
     }
 
     override fun getItemCount(): Int {

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.ui.profile.ProfileActivity
 import com.example.infinito.ui.start.StartActivity
-import com.example.infinito.utils.UserUtils
+import com.example.infinito.data.model.user.UserUtils
 import com.example.infinito.utils.language.getSavedLanguage
 import com.example.infinito.utils.language.setLocale
 

@@ -32,8 +32,6 @@
             android:layout_height="wrap_content"
             android:dateTextAppearance="@style/CalendarDateText"
             android:focusedMonthDateColor="@color/white"
-            android:maxDate="12/31/2099"
-            android:minDate="01/01/2000"
             android:selectedWeekBackgroundColor="@color/cyan"
             android:unfocusedMonthDateColor="#80FFFFFF"
             android:weekDayTextAppearance="@style/CalendarWeekDayText"

@@ -1,6 +1,6 @@
-package com.example.infinito.data.model
+package com.example.infinito.data.model.user
 
-data class User(
+data class UserModel(
     val name: String,
     val surname: String,
     val email: String,

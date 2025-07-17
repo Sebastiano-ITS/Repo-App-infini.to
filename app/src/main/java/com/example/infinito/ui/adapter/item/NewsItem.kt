@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.adapter.item
 
 data class NewsItem(
     val imageResId: Int,    // ID risorsa immagine (es. R.drawable.italia_spazio)

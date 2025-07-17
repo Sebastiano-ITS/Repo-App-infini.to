@@ -58,7 +58,6 @@ class EventActivity : AppCompatActivity() {
         val cardGenerale: MaterialCardView = findViewById(R.id.cardGenerale)
         val cardNews: MaterialCardView = findViewById(R.id.cardNews)
 
-
         if (savedInstanceState == null) {
             replaceFragment(GeneralFragment())
         }

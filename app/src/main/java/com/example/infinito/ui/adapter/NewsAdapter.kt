@@ -1,7 +1,6 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.adapter
 
 import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
 import androidx.core.net.toUri
+import com.example.infinito.ui.adapter.item.NewsItem
 
 class NewsAdapter(private val newsList: List<NewsItem>) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {

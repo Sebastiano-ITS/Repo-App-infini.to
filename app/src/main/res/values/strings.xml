@@ -1,20 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">InfiniTO</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
-    <!-- Strings for Login/SignUp -->
-    <string name="nameLabel">Nome</string>
-    <string name="surnameLabel">Cognome</string>
-    <string name="emailLabel">Email</string>
-    <string name="passwordLabel">Password</string>
-    <string name="confirmPasswordLabel">Conferma Password</string>
-    <string name="otherwiseLabel">Oppure</string>
-    <string name="googleButtonLabel">Accedi con Google</string>
-    <string name="notSignedLabel">Non hai ancora un account?\nRegistrati</string>
-    <string name="loginButtonLabel">Accedi</string>
+    <!-- Activity Event -->
+    <string name="general">Generale</string>
+    <string name="news">News</string>
+    <string name="general_icon">Icona Generale</string>
+    <string name="news_icon">Icona News</string>
 
-    <!-- Ticket string -->
-    <string name="title_ticket_screen">I Tuoi Biglietti</string>
+    <!-- Activity Event Detail -->
+    <string name="planetarium_telescope">PLANETARIO + TELESCOPIO</string>
+    <string name="calendar_label">calendario</string>
+    <string name="no_date_selected">Nessuna data selezionata</string>
+    <string name="time_label">orario</string>
+    <string name="no_time_selected">Nessun orario selezionato</string>
+    <string name="price_label">tariffa</string>
+    <string name="no_price_selected">Nessuna tariffa selezionata</string>
+    <string name="description_title">Descrizione</string>
+    <string name="buy_button">Acquista</string>
+    <string name="event_image_description">Immagine dettagli evento</string>
 
+
+    <string name="title_planetario">
+        PLANETARIO + TELESCOPIO (nuova serata osservativa)
+    </string>
+    <string name="title_astrotalk">
+        MUSEO + ASTROTALK
+    </string>
+    <string name="title_bambini">
+        LO SPAZIO AI BAMBINI (solo il primo week end del mese)
+    </string>
+    <string name="title_cinema">
+        CINEMA SOTTO LE STELLE apertura serale
+    </string>
+
+
+    <string name="planetario_telescopio_long_description">
+        - Visita libera al museo (30 minuti), con audioguida fruibile da smartphone (portare auricolari).\n\n
+        - Spettacolo sul cielo della stagione nel planetario digitale (30 minuti)\n\n
+        - L\'osservazione del cielo a occhio nudo e al telescopio dalla terrazza (45 minuti)
+    </string>
+
+    <string name="museo_astrotalk_long_description">
+    Un ciclo di incontri con scienziati e ricercatori che esplorano l\'Universo. Dalle meteoriti che cadono sulla Terra alle galassie più lontane, attraverso il Sistema Solare, i buchi neri e i raggi cosmici.\n\n
+    Gli Astrotalk sono conferenze-spettacolo che uniscono le ultime ricerche in campo astronomico e scientifico alle spettacolari immagini del Planetario digitale. \n \n \n
+    Cosa comprende il biglietto \n \n
+    - L\'Astrotalk in planetario (45 minuti)\n
+    - Uno spettacolo del planetario (30 minuti)\n
+    - La visita libera del museo interattivo (1h)\n
+    - L\'audioguida fruibile da smartphone (portare auricolari)\n \n
+    Cosa non comprende il biglietto \n
+    - La visita guidata del museo interattivo
+</string>
+
+    <string name="spazio_bambini_long_description">
+    Il primo weekend di ogni mese, con tre turni di visita: arrivo alle ore 14.30*, 16.00* o 17.30\n
+                    \n
+                    *Al biglietto di ingresso delle 14.30 o delle 16.00 puoi aggiungere il funlab 6-11 anni (attività a pagamento per il bambino 6-11 anni, un adulto accompagna gratis)
+                    \n \n Cosa comprende il biglietto\n
+                    - La visita libera del museo interattivo (1h);\n
+                    - L\'audioguida fruibile da smartphone (portare auricolari);\n
+                    - Uno spettacolo del planetario dedicato ai bambini (30 minuti).
+                    \n \n Cosa non comprende il biglietto\n
+                    - Il laboratorio funlab 6-11 anni (1h). Va aggiunto al biglietto di ingresso (bambino paga + adulto accompagna gratis);\n
+                    - La visita guidata del museo interattivo.\n
+    </string>
+
+    <string name="cinema_sotto_stelle_long_description">
+        Goditi una serata magica con proiezioni di film a tema spaziale sotto il cielo stellato. \n
+        Un\'esperienza cinematografica unica che unisce il fascino del grande schermo alla bellezza dell\'universo.\n
+        Porta la tua coperta e preparati a viaggiare tra le stelle!
+    </string>
+
+    <string name="planetario_telescopio_url">https://www.ticketlandia.com/m/event/museo-planetario-torino</string>
+    <string name="museo_astrotalk_url">https://www.ticketlandia.com/m/event/museo-astrotalk-torino</string>
+    <string name="spazio_bambini_url">https://www.ticketlandia.com/m/event/spazio-bambini-torino</string>
+    <string name="cinema_sotto_stelle_url">https://www.ticketlandia.com/m/event/cinema-stelle</string>
+
+    <!-- Tipi di tariffa -->
+    <string name="tariff_tipo_intera">Intera</string>
+    <string name="tariff_tipo_ridotto">Ridotto</string>
+    <string name="tariff_tipo_gratuito">Gratuito</string>
+    <string name="tariff_tipo_gratuita">Gratuità</string>
+    <string name="tariff_tipo_mondo_parchi">Mondo Parchi</string>
+    <string name="tariff_tipo_vivi_parchi">Vivi Parchi</string>
+    <string name="tariff_tipo_adulto">Adulto</string>
+    <string name="tariff_tipo_bambino">Bambino</string>
+
+
+    <!-- Fasce d'età -->
+    <string name="tariff_fascia_19_30_anni">19–30 anni</string>
+    <string name="tariff_fascia_31_60_anni">31–60 anni</string>
+    <string name="tariff_fascia_ragazzi_6_11_anni">Ragazzi 6–11 anni</string>
+    <string name="tariff_fascia_ragazzi_12_18_anni">Ragazzi 12–18 anni</string>
+    <string name="tariff_fascia_over_60">Over 60</string>
+    <string name="tariff_fascia_tessere_enti_convenzionati">tessere/enti convenzionati</string>
+    <string name="tariff_fascia_bambini_3_5_anni">Bambini 3–5 anni</string>
+    <string name="tariff_fascia_0_5_anni">0–5 anni</string>
+    <string name="tariff_fascia_standard">Standard</string>
+    <string name="tariff_fascia_studente">Studente</string>
+
+
+    <!-- Categorie -->
+    <string name="tariff_categoria_disabile">Disabile</string>
+    <string name="tariff_categoria_accompagnatore_disabile">Accompagnatore disabile</string>
+    <string name="tariff_categoria_passaporto_culturale">Passaporto culturale "Nati con la Cultura"</string>
+    <string name="tariff_categoria_residenti_pino_torinese">Residenti Pino Torinese</string>
+    <string name="tariff_categoria_dipendenti_osservatorio">dipendenti Osservatorio Astrofisico di Torino/ex IFSI</string>
+    <string name="tariff_categoria_club_docenti">Club Docenti di Infiniti.to</string>
+    <string name="tariff_categoria_abbonamento_musei">Abbonamento Musei</string>
+    <string name="tariff_categoria_torino_piemonte_card">Torino+Piemonte Card</string>
+
+    <!-- Activity Login/SignUp -->
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+
+    <!-- Activity Login -->
+    <string name="login_header">Accesso</string>
+    <string name="login_button_label">Accedi</string>
+    <string name="not_signed_up_label">Non hai un account? <u>Registrati</u></string>
+
+    <!-- Activity SignUp -->
+    <string name="registration_header">Registrazione</string>
+    <string name="name_label">Nome</string>
+    <string name="surname_label">Cognome</string>
+    <string name="confirm_password_label">Conferma Password</string>
+    <string name="signup_button_label">Registrati</string>
+    <string name="signed_up_label">Hai già un account? <u>Accedi</u></string>
+
+    <!-- Signup Errors -->
+    <string name="required_input_field_error">questo campo è obbligatorio</string>
+    <string name="incorrect_email_error">L\'email inserita non è valida</string>
+    <string name="incorrect_password_error">La password deve contenere almeno 8 caratteri, 1 maiuscola, 1 carattere speciale e 2 numeri</string>
+    <string name="incorrect_password_match_error">Le password non corrispondono</string>
+
+    <!-- Activity Profile -->
+    <string name="profile_icon_description">Profile Icon</string>
+    <string name="tickets_purchased">Biglietti Acquistati</string>
+    <string name="bookmark_icon_description">Bookmark Icon</string>
+    <string name="language_label">Lingua</string>
+    <string name="language_nationality">Italiano</string>
+    <string name="globe_icon_description">Globe Icon</string>
+    <string name="flag_icon_description">Italian Flag Icon</string>
+    <string name="arrow_forward_icon_description">Arrow Forward Icon</string>
+    <string name="logout_button">Esci dall\'account</string>
+    <string name="delete_account_button">Rimuovi Account</string>
+
+    <!-- Activity Ticket -->
+    <string name="your_tickets">I tuoi Biglietti</string>
+
+    <!-- Activity Start -->
+    <string name="app_title">INFINI.TO</string>
+    <string name="subtitle_text">Il museo interattivo</string>
+    <string name="start_button">INIZIA</string>
+
+    <!-- Fragment Bottom Bar -->
+    <string name="home_text">Home</string>
+    <string name="events_text">Eventi</string>
+    <string name="tickets_text">Biglietti</string>
+    <string name="home_icon_description">Home Icon</string>
+    <string name="events_icon_description">Events Icon</string>
+    <string name="tickets_icon_description">Tickets Icon</string>
+
+    <!-- Fragment Confirm Dialog -->
+    <string name="confirmation_message">Sei sicuro di\nvoler continuare ?</string>
+    <string name="yes_button">Sì</string>
+    <string name="no_button">No</string>
+
+    <!-- Fragment News -->
+    <string name="articles_and_insights_title">Articoli ed approfondimenti</string>
+    <string name="load_more_articles_button">Carica più articoli</string>
+
+    <!-- Item Card -->
+    <string name="card_image_description">Immagine della Card</string>
+    <string name="card_title_placeholder">Titolo della Card</string>
+    <string name="learn_more_button">Scopri Di Più</string>
+
+    <!-- Calendar/Time Bottom Sheet -->
+    <string name="confirm_button">Conferma</string>
+
+    <!-- Calendar Bottom Sheet -->
+    <string name="select_date_title">Seleziona la Data</string>
+
+    <!-- Price Bottom Sheet -->
+    <string name="select_price_title">Seleziona la Tariffa</string>
+
+    <!-- News Card -->
+    <string name="news_card_image_description">Immagine Articolo</string>
+    <string name="external_link_icon_description">Link Esterno</string>
+    <string name="news_card_title_placeholder">Titolo della Notizia</string>
+
+    <!-- Activity Home -->
+    <string name="section_news">Novità</string>
+    <string name="section_upcoming_activities">Prossime attività</string>
+
+    <string name="observational_evening_title">Serata osservativa</string>
+    <string name="observational_evening_subtitle">Planetario + Telescopio</string>
+    <string name="observational_evening_date">25 Luglio</string>
+    <string name="telescope_icon_description">Icona telescopio</string>
+
+    <string name="cinema_under_the_stars_title">Cinema sotto le Stelle</string>
+    <string name="cinema_under_the_stars_subtitle">Alien</string>
+    <string name="cinema_under_the_stars_date">22 Agosto</string>
+    <string name="cinema_icon_description">Icona cinema</string>
+
+    <string name="space_for_children_title">Lo spazio ai Bambini</string>
+    <string name="space_for_children_subtitle">FunLab "Astronomici equilibri"</string>
+    <string name="space_for_children_date">2 Agosto</string>
+    <string name="rocket_icon_description">Icona razzo</string>
+
+    <!-- Stringhe per le notizie -->
+    <string name="news_title_italy_space">Italia nello spazio</string>
+    <string name="news_url_italy_space">https://www.planetarioditorino.it/italia-nello-spazio</string>
+    <string name="news_title_welcome_autumn">Bentornato Autunno</string>
+    <string name="news_url_welcome_autumn">https://www.planetarioditorino.it/bentornato-autunno</string>
+    <string name="news_title_welcome_summer">Benvenuta Estate!</string>
+    <string name="news_url_welcome_summer">https://www.planetarioditorino.it/benvenuta-estate</string>
+    <string name="news_title_spring">Quando inizia La Primavera</string>
+    <string name="news_url_spring">https://www.planetarioditorino.it/quando-inizia-la-primavera</string>
+    <string name="news_title_winter_solstice">Solstizio D\'Inverno</string>
+    <string name="news_url_winter_solstice">https://www.planetarioditorino.it/solstizio-dinverno</string>
+    <string name="news_title_iss_birthday">Buon Compleanno, ISS!</string>
+    <string name="news_url_iss_birthday">https://www.planetarioditorino.it/buon-compleanno-iss</string>
+    <string name="news_title_mission_galileo">La Missione Galileo</string>
+    <string name="news_url_mission_galileo">https://www.planetarioditorino.it/la-missione-galileo</string>
+    <string name="news_title_cassini_huygens">La Missione Cassini-Huygens</string>
+    <string name="news_url_cassini_huygens">https://www.planetarioditorino.it/la-bellezza-di-saturno</string>
+    <string name="news_title_sonde_voyager">Le Sonde Voyager</string>
+    <string name="news_url_sonde_voyager">https://www.planetarioditorino.it/le-sonde-voyager</string>
+    <string name="news_title_rover_curiosity">Il Rover Curiosity</string>
+    <string name="news_url_rover_curiosity">https://www.planetarioditorino.it/il-rover-curiosity</string>
+
+    <!-- Fragment Contact -->
+    <string name="button_close">Chiudi</string>
+    <string name="schedule_and_contact">Orario e Contatti</string>
+    <string name="schedule_and_contact_url">https://www.planetarioditorino.it/home/contatti</string>
+    <string name="privacy_policy">Informativa privacy</string>
+    <string name="privacy_policy_url">https://www.planetarioditorino.it/home/privacy</string>
+    <string name="youtube_description">Youtube</string>
+    <string name="youtube_url">https://www.youtube.com/@PlanetarioDiTorino</string>
+    <string name="facebook_description">Facebook</string>
+    <string name="facebook_url">https://www.facebook.com/planetarioditorino</string>
+    <string name="twitter_x_description">Twitter X</string>
+    <string name="twitter_x_url">https://x.com/infini_to</string>
+    <string name="instagram_description">Instagram</string>
+    <string name="instagram_url">https://www.instagram.com/planetariotorino</string>
 
 </resources>

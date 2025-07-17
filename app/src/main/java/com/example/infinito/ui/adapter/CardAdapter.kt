@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
+import com.example.infinito.ui.adapter.item.CardItem
 import com.example.infinito.ui.event_detail.EventDetailActivity
 
 class CardAdapter(private val cardList: List<CardItem>) :

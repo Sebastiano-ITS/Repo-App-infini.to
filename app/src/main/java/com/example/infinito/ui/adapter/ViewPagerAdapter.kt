@@ -1,4 +1,4 @@
-package com.example.infinito.ui.home
+package com.example.infinito.ui.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

@@ -50,4 +50,7 @@ dependencies {
     implementation(libs.material.v1120)
     implementation(libs.gson)
     implementation(libs.dotsindicator)
+    implementation(libs.retrofit.v290)
+    implementation(libs.converter.gson)
+    implementation(libs.gson.v2101)
 }

@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

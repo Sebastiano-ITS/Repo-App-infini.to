@@ -4,7 +4,7 @@ import android.content.Context
 import java.io.Serializable
 
 
-data class TariffDetail(
+data class TariffModel(
     val tipo: Int,
     val fascia_eta: Int? = null, // Può essere nullo se c'è 'categoria'
     val categoria: Int? = null,  // Può essere nullo se c'è 'fascia_eta'
