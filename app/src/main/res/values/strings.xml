@@ -72,6 +72,11 @@
         Porta la tua coperta e preparati a viaggiare tra le stelle!
     </string>
 
+    <string name="planetario_telescopio_url">https://www.ticketlandia.com/m/event/museo-planetario-torino</string>
+    <string name="museo_astrotalk_url">https://www.ticketlandia.com/m/event/museo-astrotalk-torino</string>
+    <string name="spazio_bambini_url">https://www.ticketlandia.com/m/event/spazio-bambini-torino</string>
+    <string name="cinema_sotto_stelle_url">https://www.ticketlandia.com/m/event/cinema-stelle</string>
+
     <!-- Tipi di tariffa -->
     <string name="tariff_tipo_intera">Intera</string>
     <string name="tariff_tipo_ridotto">Ridotto</string>
@@ -141,6 +146,9 @@
     <string name="logout_button">Esci dall\'account</string>
     <string name="delete_account_button">Rimuovi Account</string>
 
+    <!-- Activity Ticket -->
+    <string name="your_tickets">I tuoi Biglietti</string>
+
     <!-- Activity Start -->
     <string name="app_title">INFINI.TO</string>
     <string name="subtitle_text">Il museo interattivo</string>
@@ -188,17 +196,17 @@
 
     <string name="observational_evening_title">Serata osservativa</string>
     <string name="observational_evening_subtitle">Planetario + Telescopio</string>
-    <string name="observational_evening_date">27 Giugno</string>
+    <string name="observational_evening_date">25 Luglio</string>
     <string name="telescope_icon_description">Icona telescopio</string>
 
-    <string name="song_for_stars_title">Song for stars</string>
-    <string name="song_for_stars_subtitle">Paolo della Piana</string>
-    <string name="song_for_stars_date">4 Luglio</string>
-    <string name="music_note_icon_description">Icona nota musicale</string>
+    <string name="cinema_under_the_stars_title">Cinema sotto le Stelle</string>
+    <string name="cinema_under_the_stars_subtitle">Alien</string>
+    <string name="cinema_under_the_stars_date">22 Agosto</string>
+    <string name="cinema_icon_description">Icona cinema</string>
 
     <string name="space_for_children_title">Lo spazio ai Bambini</string>
-    <string name="space_for_children_subtitle">FunLab Come partano le immagini</string>
-    <string name="space_for_children_date">5 e 6 Luglio</string>
+    <string name="space_for_children_subtitle">FunLab "Astronomici equilibri"</string>
+    <string name="space_for_children_date">2 Agosto</string>
     <string name="rocket_icon_description">Icona razzo</string>
 
     <!-- Stringhe per le notizie -->

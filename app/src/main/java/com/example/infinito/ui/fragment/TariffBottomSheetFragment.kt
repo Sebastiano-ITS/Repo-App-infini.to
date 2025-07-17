@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,29 +12,29 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.button.MaterialButton
 import com.example.infinito.R
 import androidx.core.content.res.ResourcesCompat
-import com.example.infinito.data.model.TariffDetail
+import com.example.infinito.data.model.TariffModel
 
 // Interfaccia per comunicare la tariffa selezionata all'Activity chiamante
 interface OnTariffSelectedListener {
-    fun onTariffSelected(selectedTariff: TariffDetail)
+    fun onTariffSelected(selectedTariff: TariffModel)
 }
 
 class TariffBottomSheetFragment : BottomSheetDialogFragment() {
 
     private lateinit var tariffButtonsContainer: LinearLayout
     private lateinit var confirmTariffButton: MaterialButton
-    private var selectedTariff: TariffDetail? = null
+    private var selectedTariff: TariffModel? = null
     private var selectedTariffTextView: TextView? = null // Per tenere traccia del TextView attualmente selezionato
 
     var onTariffSelectedListener: OnTariffSelectedListener? = null
 
-    private var availableTariffs: List<TariffDetail> = emptyList() // Verrà popolata dagli argomenti
+    private var availableTariffs: List<TariffModel> = emptyList() // Verrà popolata dagli argomenti
 
     companion object {
         const val ARG_AVAILABLE_TARIFFS = "available_tariffs"
 
         // Metodo factory per creare un'istanza del fragment con gli argomenti
-        fun newInstance(tariffs: List<TariffDetail>): TariffBottomSheetFragment {
+        fun newInstance(tariffs: List<TariffModel>): TariffBottomSheetFragment {
             val fragment = TariffBottomSheetFragment()
             val args = Bundle()
             args.putSerializable(ARG_AVAILABLE_TARIFFS, ArrayList(tariffs)) // Passa come ArrayList di Serializable
@@ -48,7 +48,7 @@ class TariffBottomSheetFragment : BottomSheetDialogFragment() {
         // Recupera le tariffe dagli argomenti
         @Suppress("UNCHECKED_CAST")
         arguments?.getSerializable(ARG_AVAILABLE_TARIFFS)?.let {
-            availableTariffs = it as List<TariffDetail>
+            availableTariffs = it as List<TariffModel>
         }
     }
 

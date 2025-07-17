@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.infinito.ui.event.NewsItem // Importa la data class NewsItem
-import com.example.infinito.ui.event.NewsAdapter // Importa l'adapter NewsAdapter
+import com.example.infinito.ui.adapter.item.NewsItem // Importa la data class NewsItem
+import com.example.infinito.ui.adapter.NewsAdapter // Importa l'adapter NewsAdapter
 import androidx.recyclerview.widget.GridLayoutManager // Importa GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R

@@ -70,6 +70,11 @@
         Bring your blanket and get ready to travel among the stars!
     </string>
 
+    <string name="planetario_telescopio_url">https://www.ticketlandia.com/m/event/museo-planetario-torino</string>
+    <string name="museo_astrotalk_url">https://www.ticketlandia.com/m/event/museo-astrotalk-torino</string>
+    <string name="spazio_bambini_url">https://www.ticketlandia.com/m/event/spazio-bambini-torino</string>
+    <string name="cinema_sotto_stelle_url">https://www.ticketlandia.com/m/event/cinema-stelle</string>
+
     <!-- Tariff types -->
     <string name="tariff_tipo_intera">Full</string>
     <string name="tariff_tipo_ridotto">Reduced</string>
@@ -138,6 +143,9 @@
     <string name="logout_button">Log out of account</string>
     <string name="delete_account_button">Delete Account</string>
 
+    <!-- Activity Ticket -->
+    <string name="your_tickets">Your Tickets</string>
+
     <!-- Activity Start -->
     <string name="app_title">INFINI.TO</string>
     <string name="subtitle_text">The interactive museum</string>
@@ -188,10 +196,10 @@
     <string name="observational_evening_date">June 27</string>
     <string name="telescope_icon_description">Telescope icon</string>
 
-    <string name="song_for_stars_title">Song for stars</string>
-    <string name="song_for_stars_subtitle">Paolo della Piana</string>
-    <string name="song_for_stars_date">July 4</string>
-    <string name="music_note_icon_description">Music note icon</string>
+    <string name="cinema_under_the_stars_title">Cinema under the Stars</string>
+    <string name="cinema_under_the_stars_subtitle">Alien</string>
+    <string name="cinema_under_the_stars_date">August 22</string>
+    <string name="cinema_icon_description">Cinema icon</string>
 
     <string name="space_for_children_title">Space for Children</string>
     <string name="space_for_children_subtitle">FunLab How images start</string>

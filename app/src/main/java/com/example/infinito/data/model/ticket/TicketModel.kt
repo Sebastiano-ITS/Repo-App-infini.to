@@ -1,6 +1,6 @@
-package com.example.infinito.data.model
+package com.example.infinito.data.model.ticket
 
-data class TicketDetailModel (
+data class TicketModel (
     val eventTitle: String,
     val ticketDate: String,
     val ticketTime: String,

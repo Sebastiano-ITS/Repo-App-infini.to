@@ -1,6 +1,5 @@
 package com.example.infinito.ui.login
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.infinito.R
 import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.ui.signup.SignUpActivity
-import com.example.infinito.utils.UserUtils
+import com.example.infinito.data.model.user.UserUtils
 import com.example.infinito.utils.md5.toMD5
 import com.example.infinito.utils.theme.setFixedTheme
 import com.google.android.material.textfield.TextInputEditText

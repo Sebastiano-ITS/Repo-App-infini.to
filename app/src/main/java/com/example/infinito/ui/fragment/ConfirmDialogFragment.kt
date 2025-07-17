@@ -7,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.DialogFragment
 import com.example.infinito.R
-import com.example.infinito.data.model.User
+import com.example.infinito.data.model.user.UserModel
 import com.example.infinito.ui.login.LoginActivity
-import com.example.infinito.utils.UserUtils
+import com.example.infinito.data.model.user.UserUtils
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,12 +27,12 @@ private const val ISLOGGEDIN = "isLoggedIn"
  */
 class ConfirmDialogFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private lateinit var user: User
+    private lateinit var user: UserModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            user = User(
+            user = UserModel(
                 it.getString(NAME)!!,
                 it.getString(SURNAME)!!,
                 it.getString(EMAIL)!!,
@@ -85,7 +84,7 @@ class ConfirmDialogFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(user: User) =
+        fun newInstance(user: UserModel) =
             ConfirmDialogFragment().apply {
                 arguments = Bundle().apply {
                     putString("name", user.name)

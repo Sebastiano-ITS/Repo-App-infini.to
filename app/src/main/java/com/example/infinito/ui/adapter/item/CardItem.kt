@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.adapter.item
 
 data class CardItem(
     val imageResId: Int,

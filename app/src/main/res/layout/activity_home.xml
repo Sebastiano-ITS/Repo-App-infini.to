@@ -95,7 +95,7 @@
 
                 <!-- Serata osservativa -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_serata"
+                    android:id="@+id/cv_observable"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginBottom="12dp"
@@ -182,7 +182,7 @@
 
                 <!-- Song for stars -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_song"
+                    android:id="@+id/cv_cinema"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="24dp"
@@ -191,7 +191,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cv_serata">
+                    app:layout_constraintTop_toBottomOf="@+id/cv_observable">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -202,8 +202,8 @@
                             android:layout_width="72dp"
                             android:layout_height="72dp"
                             android:layout_marginStart="16dp"
-                            android:src="@drawable/music_note"
-                            android:contentDescription="@string/music_note_icon_description"
+                            android:src="@drawable/cinema"
+                            android:contentDescription="@string/cinema_icon_description"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -214,7 +214,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
                             android:fontFamily="@font/orbitron"
-                            android:text="@string/song_for_stars_title"
+                            android:text="@string/cinema_under_the_stars_title"
                             android:textAlignment="center"
                             android:textColor="@color/cyan"
                             android:textSize="16sp"
@@ -229,7 +229,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:fontFamily="@font/orbitron"
-                            android:text="@string/song_for_stars_subtitle"
+                            android:text="@string/cinema_under_the_stars_subtitle"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="14sp"
@@ -244,7 +244,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/orbitron"
-                            android:text="@string/song_for_stars_date"
+                            android:text="@string/cinema_under_the_stars_date"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="12sp"
@@ -269,7 +269,7 @@
 
                 <!-- Lo spazio ai Bambini -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cv_bambini"
+                    android:id="@+id/cv_kids"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="24dp"
@@ -278,7 +278,7 @@
                     app:cardElevation="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cv_song">
+                    app:layout_constraintTop_toBottomOf="@+id/cv_cinema">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"

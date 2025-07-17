@@ -1,4 +1,4 @@
-package com.example.infinito.ui.event
+package com.example.infinito.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,15 +9,16 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.infinito.R
+import com.example.infinito.data.model.EventModel
 
 // Definisci un'interfaccia per gestire i clic
 interface OnEventClickListener {
-    fun onEventCardClick(event: EventItem)
-    fun onEventButtonClick(event: EventItem)
+    fun onEventCardClick(event: EventModel)
+    fun onEventButtonClick(event: EventModel)
 }
 
 class EventAdapter(
-    private val eventList: List<EventItem>,
+    private val eventList: List<EventModel>,
     private val listener: OnEventClickListener // Aggiungi il listener al costruttore
 ) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 

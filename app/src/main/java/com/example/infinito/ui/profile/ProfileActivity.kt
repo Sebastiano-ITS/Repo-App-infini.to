@@ -1,6 +1,5 @@
 package com.example.infinito.ui.profile
 
-import android.app.TaskStackBuilder
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,13 +8,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.example.infinito.MainActivity
 import com.example.infinito.R
 import com.example.infinito.ui.fragment.ConfirmDialogFragment
-import com.example.infinito.ui.home.HomeActivity
 import com.example.infinito.ui.login.LoginActivity
-import com.example.infinito.utils.UserUtils
+import com.example.infinito.data.model.user.UserUtils
+import com.example.infinito.ui.ticket.TicketActivity
 import com.example.infinito.utils.language.getSavedFlag
 import com.example.infinito.utils.language.getSavedLanguage
 import com.example.infinito.utils.language.saveFlag
@@ -26,6 +24,7 @@ class ProfileActivity : AppCompatActivity() {
     
     private lateinit var fullNameText: TextView
     private lateinit var emailText: TextView
+    private lateinit var ticketPurchasedBtn: LinearLayout
     private lateinit var changeLanguageBtn: LinearLayout
     private lateinit var flagIcon: ImageView
     private lateinit var exitAccountBtn: Button
@@ -43,6 +42,7 @@ class ProfileActivity : AppCompatActivity() {
 
         fullNameText = findViewById(R.id.fullNameText)
         emailText = findViewById(R.id.emailText)
+        ticketPurchasedBtn = findViewById(R.id.ticketPageBtn)
         changeLanguageBtn = findViewById(R.id.changeLanguageBtn)
         flagIcon = findViewById(R.id.flagIcon)
         exitAccountBtn = findViewById(R.id.exitAccountBtn)
@@ -51,6 +51,11 @@ class ProfileActivity : AppCompatActivity() {
         fullNameText.text = fullName
         emailText.text = user.email
         flagIcon.setBackgroundResource(getSavedFlag(this))
+
+        ticketPurchasedBtn.setOnClickListener {
+            val ticketIntent = Intent(this, TicketActivity::class.java)
+            startActivity(ticketIntent)
+        }
 
         changeLanguageBtn.setOnClickListener {
             if (getSavedLanguage(this) == "it" && getSavedFlag(this) == R.drawable.ic_flag_it) {
